@@ -267,6 +267,7 @@ The main tasks for this exercise are as follows:
     - **Subscription**: Your subscription name
     - **Storage account**: **:awsastudxx**:, where xx is your initials
     - **Container**: **Use existing** and select **phonecalls**
+    - **Authentication mode**: select **Connection string**
     - Leave the rest of the entries as default values. Finally, click **Save**.
 
         ![Create a Job Output in Stream Analytics Job in the Azure Portal](Linked_Image_Files/M06-E04-T03-img01.png)

@@ -26,7 +26,7 @@ You are the senior data engineer at AdventureWorks, and you are working with you
 
 You will then provision Azure Synapse Analytics server and test that the provisioning of the server is successful by testing a sample database with a series of queries. You will then use PolyBase to load a dimension table from Azure Blob to test that the integration of this data platform technology with Azure Synapse Analytics.
 
-At the end of this lad, you will have:
+At the end of this lab, you will have:
 
 1. Used Azure SQL Database
 2. Described Azure Synapse Analytics 
@@ -92,6 +92,7 @@ The main task for this exercise are as follows:
 
 > **Result**: After you completed this exercise, you have an Azure SQL Database instance
 
+
 ## Exercise 2: Describe Azure Synapse Analytics
   
 Estimated Time: 15 minutes
@@ -152,8 +153,9 @@ The main tasks for this exercise are as follows:
 7. Select **+ New dedicated SQL Pool**.
 
 8.. In the **basics** page of **Create dedicated SQL pool** blade configure the following settings:
-        - Dedicated SQL pool name: **dedsqlxx**, where **xx** are your initials
-        - Leave all the other settings per default
+- Dedicated SQL pool name: **dedsqlxx**, where **xx** are your initials
+- Set the performance of the **dedsqlxx** to **DW100**
+- Leave all the other settings per default
 
 9. In the **Create dedicated SQL pool** screen, click **Review + create**.
 
