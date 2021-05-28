@@ -33,7 +33,7 @@ At the end of this lab, you will have:
 3. Created and queried Azure Synapse Analytics 
 4. Used PolyBase to load data into Azure Synapse Analytics 
 
-> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
+> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module. In addition, pause the dedicated SQL pool when not in use. 
 
 ## Exercise 1: Use Azure SQL Database
 
@@ -221,6 +221,7 @@ The main tasks for this exercise are as follows:
     - In the Basics details section, type in the following information
 
         - **Dedicated SQL pool name**: **DWDB**
+        - Slide the **DWxxxc** to **DW100c**
 
     - Leave all the other settings as default
 
