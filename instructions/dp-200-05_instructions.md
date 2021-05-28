@@ -305,6 +305,7 @@ The main tasks for this exercise are as follows:
 
 > **Result**: After you completed this exercise, you have used Synapse Studio to create a data warehouse named DWDB and three tables named Users, Products and FactSales.
 
+
 ## Exercise 4: Using PolyBase to Load Data into Azure Synapse Analytics 
 
 Estimated Time: 10 minutes
