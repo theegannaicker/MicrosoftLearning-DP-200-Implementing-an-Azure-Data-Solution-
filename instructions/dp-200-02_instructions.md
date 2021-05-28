@@ -350,7 +350,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: The upload of the files will take approximately 5 seconds. You will see a message in Azure Storage Explorer that states **Your view may be out of data. Do you want to refresh? Click Yes**. Once completed, all two files will appear in a list in the upload blobs screen.
 
-    ![Files uploaded to Containers in Azure Storage Explore](Linked_Image_Files/M02-E04-T02-img02.png)
+   ![Files uploaded to Containers in Azure Storage Explore](Linked_Image_Files/M02-E04-T02-img02.png)
 
 16. In Azure Storage Explorer, in the data file system, click on the **+ New Folder** button.
 
