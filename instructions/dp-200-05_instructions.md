@@ -26,14 +26,14 @@ You are the senior data engineer at AdventureWorks, and you are working with you
 
 You will then provision Azure Synapse Analytics server and test that the provisioning of the server is successful by testing a sample database with a series of queries. You will then use PolyBase to load a dimension table from Azure Blob to test that the integration of this data platform technology with Azure Synapse Analytics.
 
-At the end of this lad, you will have:
+At the end of this lab, you will have:
 
 1. Used Azure SQL Database
 2. Described Azure Synapse Analytics 
 3. Created and queried Azure Synapse Analytics 
 4. Used PolyBase to load data into Azure Synapse Analytics 
 
-> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
+> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module. In addition, pause the dedicated SQL pool when not in use. 
 
 ## Exercise 1: Use Azure SQL Database
 
@@ -91,6 +91,7 @@ The main task for this exercise are as follows:
    > **Note**: The provision will takes approximately 4 minutes.
 
 > **Result**: After you completed this exercise, you have an Azure SQL Database instance
+
 
 ## Exercise 2: Describe Azure Synapse Analytics
   
@@ -152,8 +153,9 @@ The main tasks for this exercise are as follows:
 7. Select **+ New dedicated SQL Pool**.
 
 8.. In the **basics** page of **Create dedicated SQL pool** blade configure the following settings:
-        - Dedicated SQL pool name: **dedsqlxx**, where **xx** are your initials
-        - Leave all the other settings per default
+- Dedicated SQL pool name: **dedsqlxx**, where **xx** are your initials
+- Set the performance of the **dedsqlxx** to **DW100**
+- Leave all the other settings per default
 
 9. In the **Create dedicated SQL pool** screen, click **Review + create**.
 
@@ -219,6 +221,7 @@ The main tasks for this exercise are as follows:
     - In the Basics details section, type in the following information
 
         - **Dedicated SQL pool name**: **DWDB**
+        - Slide the **DWxxxc** to **DW100c**
 
     - Leave all the other settings as default
 
@@ -302,6 +305,7 @@ The main tasks for this exercise are as follows:
 15. In **Synapse Studio**, click on **Run** and the query will be executed. To verify if the **dbo.FactSales** table was created you can click refresh and navigate to **tables** which, when expanded, should show you the table. 
 
 > **Result**: After you completed this exercise, you have used Synapse Studio to create a data warehouse named DWDB and three tables named Users, Products and FactSales.
+
 
 ## Exercise 4: Using PolyBase to Load Data into Azure Synapse Analytics 
 

@@ -32,7 +32,7 @@ After completing this lab, you will be able to:
 
 ## Scenario
   
-You are assessing the tooling that can help with the extraction, load and transforming of data into the data warehouse, and have asked a Data Engineer within your team to show a proof of concept of Azure Data Factory to explore the transformation capabilities of the product. The proof of concept does not have to be related to AdventureWorks data, and you have given them freedom to pick a dataset of thier choice to showcase the capabilities.
+You are assessing the tooling that can help with the extraction, load and transforming of data into the data warehouse, and have asked a Data Engineer within your team to show a proof of concept of Azure Data Factory to explore the transformation capabilities of the product. The proof of concept does not have to be related to AdventureWorks data, and you have given them freedom to pick a dataset of their choice to showcase the capabilities.
 
 In addition, the Data Scientists have asked to confirm if Azure Databricks can be called from Azure Data Factory. To that end, you will create a simple proof of concept Data Factory pipeline that calls Azure Databricks as a compute resource.
 
@@ -43,7 +43,7 @@ At the end of this lad, you will have:
 3. Used the Mapping Data Flow task to perform transformation
 4. Performed transformations using a compute resource
 
-> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
+> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module. When you're not using the dedicated SQL Pool, please pause. If you do use the dedicated SQL pool, resume. 
 
 ## Exercise 1: Setup Azure Data Factory
 
@@ -194,15 +194,16 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Preparing the environment
 
-1. **Turn on Data Flow Debug** Turn the **Data Flow Debug** slider located at the top of the authoring module on. 
-
-    > NOTE: Data Flow clusters take 5-7 minutes to warm up.
-
-2. **Add a Data Flow activity** In the Activities pane, open the Move and Transform accordion and drag the **Data Flow** activity onto the pipeline canvas. 
+1. **Add a Data Flow activity** In the Activities pane, open the **Move and Transform** accordion and drag the **Data Flow** activity onto the pipeline canvas. 
 
     ![Adding a Mapping Data Flow in Azure Data Factory](Linked_Image_Files/M07-E03-T01-img01.png)
 
-3. In the setings tab, click **+ New** for the variable **Dataflow**
+2. **Turn on Data Flow Debug** Turn the **Data Flow Debug** slider located at the top of the authoring module on. 
+
+    > NOTE: Data Flow clusters take 5-7 minutes to warm up.
+
+
+3. Select the data flow activity in the pipeline workspace. In the lower pane, select the settings tab, click **+ New** for the variable **Dataflow**
 
 ### Task 2: Adding a Data Source
 
@@ -359,9 +360,9 @@ The main tasks for this exercise are as follows:
 
 1. In Microsoft Edge, click on the tab for the portal In the Azure portal, and return to Azure Data Factory.
 
-2. In the **xx-data-factory** screen, click on **Author & Monitor**. Another tab opens up to author an Azure Data Factory solution.
+2. In the **xx-data-factory** screen, click on **Manage** tab. Another tab opens up to author an Azure Data Factory solution.
 
-3. On the left hand side of the screen, click on the **Author** icon. This opens up the Data Factory designer.
+3. On the left hand side of the screen, click on the **Manage** icon. This opens up the Data Factory designer.
 
 4. At the bottom of the screen, click on **Connections**, and then click on **+ New**.
 
@@ -380,7 +381,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 5: Create a pipeline that uses Databricks Notebook Activity.
 
-1. On the left hand side of the screen, under Factory Resources, click on the **+** icon, and then click on **Pipeline**. This opens up a tab with a Pipeline designer.
+1. On the left hand side of the screen, select the **Author** item to create a pipeline. Under Factory Resources, click on the **+** icon, and then click on **Pipeline**. This opens up a tab with a Pipeline designer.
 
 2. At the bottom of the pipeline designer, click on the parameters tab, and then click on **+ New**
 
