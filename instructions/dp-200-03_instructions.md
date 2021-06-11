@@ -81,26 +81,27 @@ The main tasks for this exercise are as follows:
 
 2. In the Azure portal, click on the **+ Create a resource** icon.
 
-3. In the New screen, click in the **Search the Marketplace** text box, and type the word **databricks**. Click **Azure Databricks** in the list that appears.
+3. In the New screen, click in the **Search services and marketplace** text box, and type the word **Azure databricks**. Click **Azure Databricks** in the list that appears.
 
 4. In the **Azure Databricks** blade, click **Create**.
 
 5. In the **Azure Databricks Service** blade, create an Azure Databricks Workspace with the following settings:
 
-    - **Workspace name**: **awdbwsstudxx**, where **xx** are your initials.
-
     - **Subscription**: the name of the subscription you are using in this lab
+
 
     - **Resource group**: **awrgstudxx**, where **xx** are your initials.
 
-    - **Location**: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs.
+    - **Workspace name**: **awdbwsstudxx**, where **xx** are your initials.
+
+    - **Region**: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs.
 
     - **Pricing Tier**: **Premium (+ Role-based access controls)**.
 
 
         ![Creating Azure Databricks in the Azure portal](Linked_Image_Files/M03-E02-T01-img01.png)
 
-6. In the **Azure Databricks Service** blade, click **Create**.
+6. In the **Azure Databricks Service** blade, click **Review +create**. Then click **Create**
 
    > **Note**: The provision will take approximately 3 minutes. The Databricks Runtime is built on top of Apache Spark and is natively built for the Azure cloud. Azure Databricks completely abstracts out the infrastructure complexity and the need for specialized expertise to set up and configure your data infrastructure. For data engineers, who care about the performance of production jobs, Azure Databricks provides a Spark engine that is faster and performant through various optimizations at the I/O layer and processing layer (Databricks I/O).
    
@@ -132,11 +133,9 @@ The main tasks for this exercise are as follows:
 
     - **Pool**: **None**
 
-    - **Databricks Runtime Version**: **Runtime: 7.4 (Scala 2.12, Spark 3.0.1)**
-    
-    - **Python version**: **3**
+    - **Databricks Runtime Version**: **Runtime: 8.3 (Scala 2.12, Spark 3.1.1)**
 
-    - Make sure you select the **Terminate after 60** minutes of inactivity check box. If the cluster isn't being used, provide a duration (in minutes) to terminate the cluster.
+    - Make sure you select and set the **Terminate after 60** minutes of inactivity check box. If the cluster isn't being used, provide a duration (in minutes) to terminate the cluster.
 
     - **Min Workers**: **1**
 
@@ -200,39 +199,37 @@ The main tasks for this exercise are as follows:
 
 7. In the **DLAccess** registered app screen, click on **Certificates and Secrets**, and the click **+ New Client Secret**
 
-8. In the Add a client secret screen. type a **description** of **DL Access Key**, and a **duration** of **In 1 year** for the key. When done, click **Add**.
+8. In the Add a client secret screen. type a **description** of **DL Access Key**, and a **Expires** of **12 months** for the key. When done, click **Add**.
 
     ![Adding a client secret in the Azure portal](Linked_Image_Files/M03-E03-T03-img02.png)
 
-    >**Important**: When you click on **Add**, the key will appear as shown in the graphic below. You only have one opportunity to copy this key value into Notepad
+    >**Important**: When you click on **Add**, the key will appear as shown in the graphic below. Make sure you copy the **Value** and the **Secret ID** and paste it in a notepad. 
 
     ![Location of the DLAccess Key](Linked_Image_Files/M03-E03-T03-img03.png)
 
-9. Copy the **Application key value** and paste it into Notepad
+9. Assign the Storage Blob Data Contributor permission to your resource group. In the Azure portal, click on the **Home** hyperlink, and then the **Resource groups** icon, click on the resource group **awrgstudxx**, where **xx** are your initials.
 
-10. Assign the Storage Blob Data Contributor permission to your resource group. In the Azure portal, click on the **Home** hyperlink, and then the **Resource groups** icon, click on the resource group **awrgstudxx**, where **xx** are your initials.
+10. In the **awrgstudxx** screen, click on **Access Control (IAM)** 
 
-11. In the **awrgstudxx** screen, click on **Access Control (IAM)** 
+11. Click on the **Role assignments** tab. 
 
-12. Click on the **Role assignments** tab. 
+12. Click **+ Add**, and click **Add role assignment**
 
-13. Click **+ Add**, and click **Add role assignment**
+13. In the **Add role assignment** blade, under Role, select **Storage Blob Data Contributor**.
 
-14. In the **Add role assignment** blade, under Role, select **Storage Blob Data Contributor**.
+14. In the **Add role assignment** blade, under **Select**, select **DLAccess**, and then click **Save**.
 
-15. In the **Add role assignment** blade, under Select, select **DLAccess**, and then click **Save**.
+15. In the Azure portal, click the **Home** hyperlink, and then click the **Azure Active Directory** icon, Note **your role**. If you have the User role, you must make sure that non-administrators can register applications.
 
-16. In the Azure portal, click the **Home** hyperlink, and then click the **Azure Active Directory** icon, Note **your role**. If you have the User role, you must make sure that non-administrators can register applications.
+16. Click **Users**, and then click **User settings**. Check the **App registrations** setting. This value can only be set by an administrator. If set to **Yes**, any user in the Azure AD tenant can register an app. 
 
-17. Click **Users**, and then click **User settings** in the **Users - All users** blade, Check the **App registrations** setting. This value can only be set by an administrator. If set to Yes, any user in the Azure AD tenant can register an app. 
+17. Close down the **Users - All users** screen.
 
-18. Close down the **Users - All users** screen.
+18. In the Azure Active Directory blade, click **Properties**.
 
-19. In the Azure Active Directory blade, click **Properties**.
+19. Click on the Copy icon next to the **Tenant ID** to get your tenant ID and paste this into notepad.
 
-20. Click on the Copy icon next to the **Directory ID** to get your tenant ID and paste this into notepad.
-
-21. Save the notepad document in the folder **Allfiles\Labfiles\Starter\DP-200.3** as **DatabricksDetails.txt**
+20. Save the notepad document in the folder **Allfiles\Labfiles\Starter\DP-200.3** as **DatabricksDetails.txt**
 
 ### Task 4: Create a Databricks Notebook and connect to a Data Lake Store.
 
@@ -240,11 +237,11 @@ The main tasks for this exercise are as follows:
 
     > **Note**: You will see the Clusters page.
 
-2. In the Azure Databricks blade on the left of Microsoft Edge, click on Under **Workspace**, click on the drop down next to **Workspace**, then point to **Create** and then click on **Notebook**.
+2. In the Azure Databricks blade on the left of Microsoft Edge, click on **Workspace**, click on the drop down next to **Workspace**, and click on the dropdown next to **Users**. Then click on the drop down next to your username and point to **Create** and then click on **Notebook**.
 
 3. In the **Create Notebook** screen, next to Name type **My Notebook**.
 
-4. Next to the **Language** drop down list, select **Scala**.
+4. Next to the **Default Language** drop down list, select **Scala**.
 
 5. Ensure that the Cluster states the name of the cluster that you have created earlier, click on **Create**
 
@@ -264,7 +261,16 @@ The main tasks for this exercise are as follows:
     spark.conf.set("fs.azure.account.oauth2.client.endpoint.<storage-account-name>.dfs.core.windows.net", "https://login.microsoftonline.com/<tenant-id>/oauth2/token")
     ```
 
-7. In this code block, replace the **application-id**, **authentication-id**, **tenant-id**, **file-system-name** and **storage-account-name** placeholder values in this code block with the values that you collected earlier and are held in notepad.
+7. In this code block, replace the **application-id**, **authentication-key**, **tenant-id**, and **storage-account-name** placeholder values in this code block* with the values that you collected earlier and are held in notepad.
+
+    - **storage-account-name**: **awdlsstudxx**, where **xx** are your initials.
+
+    - **application-id**: the application id you've created under Microsoft Azure Active Directory -> App Registrations -> DLAccess app-> Application (client) ID
+
+    - **authentication-key**: when you created the client secret, it is the the key that will appear as **Value**  (see step 8 in task 3)
+
+    - **tenant-id**: this ID you should have saved but can be find through Microsoft_AAD_IAM -> ActiveDirectoryMenuBlade -> Properties
+
 
 8. In the Notebook, in the cell under **Cmd 1**, click on the **Run** icon and click on **Run Cell** as highlighted in the following graphic. 
 
@@ -274,9 +280,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 5: Read data in Azure Databricks.
 
-1. In the Notebook, hover your mouse at the top right of cell **Cmd 1**, and click on the **Add Cell Below** icon. A new cell will appear named **Cmd2**.
-
-    ![Adding a cell in a Notebook in Azure Databricks](Linked_Image_Files/M03-E03-T04-img03.png)
+1. In the Notebook, hover your mouse over the code cell you just created, and click on the **+** icon. A new cell will appear named **Cmd2**.
 
 2. In the Notebook, in the cell  **Cmd 2**, copy the following code and paste it into the cell:
 
@@ -292,7 +296,7 @@ The main tasks for this exercise are as follows:
 
     >**Note** A message will be returned at the bottom of the cell that states that a Spark job has executed and "Command took 0.0X seconds -- by person at 4/4/2019, 2:46:48 PM on awdbclstudxx"
 
-5. In the Notebook, hover your mouse at the top right of cell **Cmd 2**, and click on the **Add Cell Below** icon. A new cell will appear named **Cmd3**.
+5. In the Notebook, hover your mouse over the code cell you just created, and click on the **+** icon. A new cell will appear named **Cmd3**. 
 
 6. In the Notebook, in the cell  **Cmd 3**, copy the following code and paste it into the cell:
 
@@ -330,7 +334,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Retrieve specific columns on a Dataset
 
-1. In the Notebook, hover your mouse at the top right of cell **Cmd 3**, and click on the **Add Cell Below** icon. A new cell will appear named **Cmd4**.
+1. In the Notebook, hover your mouse at underneath cell **Cmd 3**, and click on the **+** icon. A new cell will appear named **Cmd4**.
 
 2. In the Notebook, in the cell  **Cmd 4**, copy the following code and paste it into the cell:
 
@@ -349,7 +353,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 2: Performing a column rename on a Dataset
 
-1. In the Notebook, hover your mouse at the top right of cell **Cmd 4**, and click on the **Add Cell Below** icon. A new cell will appear named **Cmd5**.
+1. In the Notebook, hover your mouse below cell **Cmd 4**, and click on the **+** icon. A new cell will appear named **Cmd5**.
 
 2. In the Notebook, in the cell  **Cmd 5**, copy the following code and paste it into the cell:
 
@@ -368,7 +372,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 3: Adding Annotations
 
-1. In the Notebook, hover your mouse at the top right of cell **Cmd 5**, and click on the **Add Cell Below** icon. A new cell will appear named **Cmd6**.
+1. In the Notebook, hover your mouse below cell **Cmd 5**, and click on the **+** icon. A new cell will appear named **Cmd6**.
 
 2. In the Notebook, in the cell  **Cmd 6**, copy the following code and paste it into the cell:
 
