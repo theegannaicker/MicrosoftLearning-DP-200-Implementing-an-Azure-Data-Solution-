@@ -81,13 +81,13 @@ The main tasks for this exercise are as follows:
 
 2. In the Azure portal, click on the **Resource groups** icon.
 
-3. In the **Resource groups** screen, click on **+ Add** to create the first resource group with the following settings:
+3. In the **Resource groups** screen, click on **+ Create** to create the first resource group with the following settings:
 
     - **Subscription**: the name of the subscription you are using in this lab
     
     - **Resource group name**: **awrgstudxx**, where **xx** are your initials.
 
-    - **Resource group location**: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs.
+    - **Resource group region**: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs.
 
       > **Note**: To identify Azure regions available in your subscription, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
@@ -105,11 +105,11 @@ The main tasks for this exercise are as follows:
 
 2. In the Azure portal, click on the **+ Create a resource** icon.
 
-3. In the New screen, click in the **Search the Marketplace** text box, and type the word **storage acount**. Click **Storage account** in the list that appears.
+3. In the New screen, click in the **Search services and  marketplace** text box, and type the word **storage account**. Click **Storage account** in the list that appears.
 
 4. In the **Storage account** screen, click **Create**.
 
-5. From the **Create storage account** screen, create the first storage account with the following settings:
+5. From the **Create a storage account** screen in the **Basics** tab, create the first storage account with the following settings:
 
     - Under the project details, specify the following settings:
 
@@ -117,17 +117,17 @@ The main tasks for this exercise are as follows:
     
         - **Resource group**: **awrgstudxx**, where **xx** are your initials.
 
-    - Under the instance details, specify the following settings:
+    - Under the Instance details, specify the following settings:
     
         - **Storage account name**: **awsastudxx**, where **xx** are your initials.
 
-        - **Location**: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs.
+        - **Region**: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs.
 
         - **Performance**: **Standard**.
 
-        - **Account kind**: **StorageV2 (general purpose v2)**.
+        - **Redundancy**: **Geo-redundant storage (GRS)**
 
-        - **Replication**: **Read-access geo-redundant storage (RA_GRS)**
+        - Select **Make read access to data available in the event of regional unavailability.**
 
             ![Create storage account settings in the Azure portal](Linked_Image_Files/M02-E02-T02-img01.png)
 
@@ -139,9 +139,9 @@ The main tasks for this exercise are as follows:
 
 ### Task 3: Create and configure a container within the storage account.
 
-1. In the Azure portal, a message states that _Your deployment is complete_, click on the button **Go to resource**.
+1. In the Azure portal, a message states that _Deployment succeeded_, click on the button **Go to resource**.
 
-2. In the **awsastudxx** screen, where **xx** are your initials, under the **Blob Service** click **Containers**.
+2. In the **awsastudxx** screen, where **xx** are your initials, under the **Data storage** click **Containers**.
 
 3. In the **awsastudxx - Containers** screen, at the top left, click on the  **+ Container** button.
 
@@ -165,7 +165,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 4: Upload some graphics to the images container of the storage account.
 
-1. In the Azure portal, in the **awsastudxx - Containers** screen, click on the **images** item in the list.
+1. In the Azure portal, in the **awsastudxx - Containers** screen, click on the **images** container in the list.
 
 2. In the **images** screen, click on the **Upload** button.
 
@@ -210,11 +210,11 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, click on **+ Create a resource** icon.
 
-2. In the New screen, click in the **Search the Marketplace** text box, and type the word **storage**. Click **Storage account** in the list that appears.
+2. In the New screen, click in the **Search services and marketplace** text box, and type the word **storage**. Click **Storage account** in the list that appears.
 
 3. In the **Storage account** blade, click **Create**.
 
-4. From the **Create storage account*** blade, create a storage account with the following settings:
+4. From the **Create a storage account*** blade, create a storage account with the following settings:
 
     - Under the project details, specify the following settings:
 
@@ -226,21 +226,21 @@ The main tasks for this exercise are as follows:
 
         - **Storage account name**: **awdlsstudxx**, where **xx** are your initials.
 
-        - **Location**: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs.
+        - **Region**: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs.
 
         - **Performance**: **Standard**.
 
-        - **Account kind**: **StorageV2 (general purpose v2)**.
+        - **Redundancy**: **Geo-redundant storage (GRS)**
 
-        - **Replication**: **Read-access geo-redundant storage (RA_GRS)**
+         - Select **Make read access to data available in the event of regional unavailability.**       
 
 5. Click on the **Advanced** tab.
 
-6. Under Data Lake Storage Gen2, click **Enabled** under **Hierarchical namespace**.
+6. Under Data Lake Storage Gen2, check the checkbox for **Enable hierarchical namespace**.
 
     ![Defining the Hierarchical Namespace setting in Create Storage Account screen in the Azure portal](Linked_Image_Files/M02-E03-T01-img01.png)
 
-7. In the **Create storage account** blade, click **Review + create**.
+7. In the **Create a storage account** blade, click **Review + create**.
 
 8. After the validation of the  **Create storage account*** blade, click **Create**.
 
@@ -248,7 +248,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 2: Create and configure a Container within the storage account.
 
-1. In the Azure portal, a message states that _Your deployment is complete_, click on the button **Go to resource**.
+1. In the Azure portal, a message states that _Deployment succeeded_, click on the button **Go to resource**.
 
 2. In the **awdlsstudxx** screen, where **xx** are your initials, click **Containers**.
 
@@ -260,7 +260,7 @@ The main tasks for this exercise are as follows:
 
     - Name: **logs** with the public access level of **Private (no anonymous access)**.
 
-5. In the **New Containers** screen, click **Create**.
+5. In the **New Container** screen, click **Create**.
 
    > **Note**: The creation of the file system is immediate and will appear in the list of the **awdlsstudxx - Containers** screen as follows.
 
@@ -282,7 +282,11 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Install Storage Explorer.
 
-3. In the Azure portal, in the **awdlsstudxx** overview page, navigate to **Open in Explorer** and then click on the **Download Azure Storage Explorer** hyperlink.
+1. In the Azure portal, in the **awdlsstudxx** overview page, navigate to **Storage Explorer (preview)** and then navigate to **Containers**
+
+2. Click on the **logs** container and click on **Upload**
+
+3. On the right hand side a popup will appear and click on the **Download Azure Storage Explorer** hyperlink.
 
 4. You are taken to the following web page for [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) where there is a button that states **Download now**. click on this button.
 
@@ -300,9 +304,15 @@ The main tasks for this exercise are as follows:
 
 10. The left pane now displays all the Azure accounts you've signed in to. To connect to another account, select **Add an account**
 
-11. If you want to sign into a national cloud or an Azure Stack, click on the Azure environment dropdown to select which Azure cloud you want to use. Once you have chosen your environment, click the **Sign in...** button.
+11. Select **Subscription**
 
-12. After you successfully sign in with an Azure account, the account and the Azure subscriptions associated with that account are added to the left pane. Select the Azure subscriptions that you want to work with, and then select **Apply**. The left pane displays the storage accounts associated with the selected Azure subscriptions.
+12. Select the Azure environment you will use to sign in
+
+13. You will be redirect to a login page
+
+14. Select your account where the following pop up message should show up **Authenticated. You can return to Storage Explorer. You might need to authenticate again if you close this browser tab**
+
+15. After you successfully sign in with an Azure account, the account and the Azure subscriptions associated with that account are added to the left pane. Select the Azure subscriptions that you want to work with, and then select **Open explorer**. The left pane displays the storage accounts associated with the selected Azure subscriptions.
 
     ![Azure Storage Explore](Linked_Image_Files/M02-E04-T01-img01.png)
 
@@ -314,7 +324,7 @@ The main tasks for this exercise are as follows:
 
 3. Under **Blob Containers**, click on the arrow to expand it and show the **logs** file system. Click on the **logs** file system.
 
-4. In Azure Storage Explorer, click on the arrow next to the **Upload** icon, and click on the **Upload Files..**.
+4. In Azure Storage Explorer, click on the arrow of the **Upload** icon, and click on the **Upload Files..**.
 
 5. In Upload Files dialog box, click on the ellipsis next to the **Selected files** text box.
 
@@ -334,7 +344,7 @@ The main tasks for this exercise are as follows:
 
 9. Under **Blob Containers**, click on the arrow to expand it and show the **data** file system. Click on the **data** file system.
 
-10. In Azure Storage Explorer, click on the arrow next to the **Upload** icon, and click on the **Upload Files..**.
+10. In Azure Storage Explorer, click on the arrow of the **Upload** icon, and click on the **Upload Files..**.
 
 11. In Upload Files dialog box, click on the ellipsis next to the **Selected files** text box.
 
@@ -354,7 +364,7 @@ The main tasks for this exercise are as follows:
 
 16. In Azure Storage Explorer, in the data file system, click on the **+ New Folder** button.
 
-17. In the New Folder screen, in the New folder name text box, type **output**.
+17. In the New Folder screen, in the New folder name text box, type **output** and click on **OK**
 
 18. Close down Azure Storage Explorer.
 
