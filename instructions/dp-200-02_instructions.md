@@ -312,7 +312,7 @@ The main tasks for this exercise are as follows:
 
 14. Select your account where the following pop up message should show up **Authenticated. You can return to Storage Explorer. You might need to authenticate again if you close this browser tab**
 
-12. After you successfully sign in with an Azure account, the account and the Azure subscriptions associated with that account are added to the left pane. Select the Azure subscriptions that you want to work with, and then select **Open explorer**. The left pane displays the storage accounts associated with the selected Azure subscriptions.
+15. After you successfully sign in with an Azure account, the account and the Azure subscriptions associated with that account are added to the left pane. Select the Azure subscriptions that you want to work with, and then select **Open explorer**. The left pane displays the storage accounts associated with the selected Azure subscriptions.
 
     ![Azure Storage Explore](Linked_Image_Files/M02-E04-T01-img01.png)
 
