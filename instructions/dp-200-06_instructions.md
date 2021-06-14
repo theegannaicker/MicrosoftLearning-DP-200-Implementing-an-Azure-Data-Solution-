@@ -104,7 +104,7 @@ The main tasks for this exercise are as follows:
 
 4. In the **xx-phoneanalysis-ehn** screen, click on **+ Event Hubs**.
 
-5. Provide the name **xx-phoneanalysis-eh**, leave the other settings to thier default values and then select **Create**.
+5. Provide the name **xx-phoneanalysis-eh**, leave the other settings to their default values and then select **Create**.
 
     ![Creating an Event Hub in Azure portal](Linked_Image_Files/M06-E02-T02-img01.png)
 
@@ -215,7 +215,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Provision a Stream Analytics job.
 
-1. Go back to the Azure portal, navigate and click on the **+ Create a resource** icon, type **STREAM**, and then click the **Stream Analytics Job**, and then click **Create**.
+1. Go back to the Azure portal, navigate and click on the **+ Create a resource** icon, type **Stream analytics**, and then click the **Stream Analytics Job**, and then click **Create**.
 
 2. In the **New Stream Analytics job** screen, fill out the following details and then click on **Create**:
     - **Job name**: phoneanalysis-asa-job.
@@ -223,6 +223,7 @@ The main tasks for this exercise are as follows:
     - **Resource group**: awrgstudxx
     - **Location**: choose a location nearest to you.
     - Leave other options to their default settings
+    - Click **Create**
 
         ![Create a Stream Analytics Job in the Azure Portal](Linked_Image_Files/M06-E04-T01-img01.png)
 
@@ -236,7 +237,7 @@ The main tasks for this exercise are as follows:
 
 3. In your **phoneanalysis-asa-job** Stream Analytics job window, in the left hand blade, under **Job topology**, click **Inputs**.
 
-4. In the **Inputs** screen, click **+ Add stream input**, and then click **Event Hubs**.
+4. In the **Inputs** screen, click **+ Add stream input**, and then click **Event Hub**.
 
 5. In the Event Hub screen, type in the following values and click the **Save** button.
     - **Input alias**: Enter a name for this job input as **PhoneStream**.
@@ -316,7 +317,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 5: Start the Stream Analytics job
 
-1. In your **phoneanalysis-asa-job** window, in the **Query** screen in the middle of the window, click on **Start**
+1. In your **phoneanalysis-asa-job** window, click on **Start**
  
 2. In the **Start Job** dialog box that opens, click **Now**, and then click **Start**. 
 
