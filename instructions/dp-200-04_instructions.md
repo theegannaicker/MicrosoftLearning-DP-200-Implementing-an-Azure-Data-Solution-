@@ -49,11 +49,13 @@ The main task for this exercise are as follows:
 
 2. Navigate to the **+ Create a resource** icon.
 
-3. In the New screen, click in the **Search the Marketplace** text box, and type the word **Cosmos**. Click **Azure Cosmos DB** in the list that appears.
+3. In the New screen, click in the **Search the services and marketplace** text box, and type the word **Cosmos**. Click **Azure Cosmos DB** in the list that appears.
 
 4. In the **Azure Cosmos DB** screen, click **Create**.
 
-5. From the **Create Azure Cosmos DB Account** screen, create an Azure Cosmos DB Account with the following settings:
+5. Select the **Core (SQL) - Recommended** and click **Create**
+
+6. From the **Create Azure Cosmos DB Account- Core (SQL)** screen, create an Azure Cosmos DB Account with the following settings:
 
     - In the Project details of the screen, type in the following information
     
@@ -65,23 +67,23 @@ The main task for this exercise are as follows:
 
         - **Account name**: **awcdbstudxx**, where **xx** are your initials.
 
-        - **API**: **Core(SQL)**
+         - **Location**: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs.
 
-        - **Notebooks (Preview)**: **Off**
+         - **Capacity mode**: Select **Provisioned throughput**       
 
-        - **Location**: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs.
+        - **Apply Free Tier Discount**: Select **Do No Apply**
 
         - Leave the remaining options to the default settings
 
             ![Creating Azure Cosmos DB in the Azure portal](Linked_Image_Files/M04-E01-T01-img01.png)
 
-6. In the **Create Azure Cosmos DB Account** blade, click **Review + create**.
+7. In the **Create Azure Cosmos DB Account - Core (SQL)** blade, click **Review + create**.
 
-7. After the validation of the **Create Azure Cosmos DB Account** blade, click **Create**.
+8. After the validation of the **Create Azure Cosmos DB Account** blade, click **Create**.
 
    > **Note**: The provision will takes approximately 5 minutes. What is often avoided in these labs is a description of the additional tabs when you provision any service in Azure. You may notice that in the provisioning screen there will be additional tabs such as Network, Tags or Advanced. This enables you to define any customized settings for a service. For example, the network tab of many services enables you to define the configuration of virtual networks, so that you are able to control and secure the network traffic against a given data service. The Tags option  are name/value pairs that enable you to categorize resources and view consolidated billing by applying the same tag to multiple resources and resource groups. Advanced tabs will vary dependant on the service that has it. But it is important to note that you have control over these areas and you wil want to collaborate with your Network admins or indeed your finance department to see how these options should be configured.
 
-8. When the provisioning is complete, the "Your deployment is complete" screen appears, click on **Go to resource** and move onto the next exercise. 
+9. When the provisioning is complete, the "Your deployment is complete" screen appears, click on **Go to resource** and move onto the next exercise. 
 
 >**Result** In this exercise, you have provisioned an Azure Cosmos DB Account
 
@@ -112,8 +114,10 @@ The main tasks for this exercise are as follows:
 4. In the **Add Container** blade, create a Products database with a container named Clothing with the following settings:
 
     - **Database id**: **Products**
+
+    - Select **Share throughput across containers**
     
-    - **Throughput**:  **400**
+    - For **Database throughput** set **400**
 
     - **Container id**:  **Clothing**
 
@@ -127,13 +131,11 @@ The main tasks for this exercise are as follows:
 
 ### Task 2: Add data using the portal
 
-1. In the **awcdbstudcto - Data Explorer** screen, on the Data Explorer toolbar, opposite the button for New Container, click on the **Open Full Screen** button. In the Open Full Screen dialog box, click **Open**. A new tab opens up in Microsoft Edge.
+1. In the **SQL API** pane, click in the refresh icon, and then expand **Products**, followed by **Clothing** and click on **Items**. 
 
-2. In the **SQL API** pane, click in the refresh icon, and then expand **Products**, followed by **Clothing** and click on **Items**. 
+2. In the pane, click on the icon for **New Item**. A new document appears with a sample JSON that you will now replace.
 
-3. In the Documents pane, click on the icon for **New Item**. A new document appears with a sample JSON that you will now replace.
-
-4. Copy the following code and paste it into the **Documents** tab:
+3. Copy the following code and paste it into the **Documents** tab:
 
     ```JSON
     {
@@ -156,11 +158,11 @@ The main tasks for this exercise are as follows:
 
     ![Adding data into Cosmos DB using Data Explorer in the Azure portal](Linked_Image_Files/M04-E02-T02-img01.png)
 
-5. Once you've added the JSON to the Documents tab, click **Save**.
+4. Once you've added the JSON to the Documents tab, click **Save**.
 
-6. In the Documents pane, click on the icon for **New Item**.
+5. In the Documents pane, click on the icon for **New Item**.
 
-7. Copy the following code and paste it into the **Items** tab:
+6. Copy the following code and paste it into the **Items** tab:
 
     ```JSON
     {
@@ -189,7 +191,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 3: Run queries in the Azure portal.
 
-1. In the Edge browser that opened, in the data explorer, in the **Items** screen, click on the button **New SQL Query** that is above the **SQL API** Blade, above the **refresh** icon.
+1. In the data explorer pane, in the **Items** screen, click on the button **New SQL Query** that is above the **SQL API** Blade, above the **refresh** icon.
 
     > **Note**: A Query 1 screen tab appears which shows the query **SELECT * FROM c** .
 
@@ -285,7 +287,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 4: Run complex operations on your data
 
-1. In the Edge browser that opened, in the data explorer, in the **Items** screen, click on the button **New Stored Procedure**, which you can find next to the button of open query.
+1. In the data explorer pane, in the **Items** screen, click on the button **New Stored Procedure**, which you can find next to the button of open query.
 
     > **Note**: A New Stored Procedure screen appears which shows a sample stored procedure .
 
@@ -319,7 +321,7 @@ The main tasks for this exercise are as follows:
 
 5. In the New Stored Procedure screen, click **Execute**.
 
-6. In the Input Parameters screen, set the **Partition Key Value**, **Type** to **String**, and **Value** to  **33218898**, leave the other settings the same, and then click **Execute**.
+6. In the Input Parameters screen, set the **Partition Key Value**, **Key** to **String**, and **Value** to  **33218898**, leave the other settings the same, and then click **Execute**.
 
 See below:
 
@@ -340,7 +342,7 @@ The following result is returned
     }
     ```
 
-7. In the Edge browser that opened, in the data explorer, click on the drop down button for **New Stored Procedure** and click **New UDF** .
+7. In the data explorer pane, click on the drop down button for **New Stored Procedure** and click **New UDF** .
 
     > **Note**: A New UDF 1 screen appears which shows **function userDefinedFunction(){}**
 
