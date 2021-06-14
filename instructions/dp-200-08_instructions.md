@@ -132,15 +132,15 @@ The main tasks for this exercise are as follows:
 
 2. In the AdventureworksLT (sqlservicekdwj/AdventureworksLT) screen, click on the **Auditing** blade.
 
-3. Under **Auditing**, click on the **ON** button.
+3. Under **Azure SQL Auditing**, select **Enable Azure SQL Auditing**
 
-4. Check the **Storage** box and then click on **Storage Details - Configure**.
+4. Check the **Storage** box.
 
-5. In the **Storage Setting** screen, click **Subscription - change storage subscription**, and then click your subscription.
+5. Select your Azure Subscription that you're using for this lab.  
 
-6. In the **Storage Setting** screen, click **Storage Settings - Configure required settings**. In the **Choose storage account** screen, click **awsastudxx**
+6. For **Storage account**, select **awsastudxx**
 
-7. In the **Retention Days** text box, type **90**, and then click on **OK**.
+7. Under **Advanced properties**, in the **Retention Days** text box, type **90**, and then click on **Save**.
 
     ![Configuring Auditing in the Azure Portal](Linked_Image_Files/M08-E04-T01-img01.png)
 
@@ -150,7 +150,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal,  click **Resource groups**, and then click awrgstudxx, and then click on the sqlservicexx and navigate to **AdventureworksLT (sqlservicekdwj/AdventureworksLT)**.
 
-2. Navigate to the **query editor**
+2. Navigate to the **Query editor**
 
 3. In the **SQL server authentication** pane that shows up log in with the following details:
     - Username: **xxsqladmin**
@@ -160,11 +160,9 @@ The main tasks for this exercise are as follows:
 
 > **Note**: An error message is returned as the password is incorrect. Type in the correct password of **P@Ssw0rd**.
 
-5. Type in the correct password of **Pa55w.rd**
+5. In **query editor**, expand **AdventureWorksLT**, and then expand **Tables**.
 
-6. In **query editor**, expand **AdventureWorksLT**, and then expand **Tables**.
-
-7. Right click [SalesLT].[Customers] and then click **Select Top 1000 Rows**
+6. Right click [SalesLT].[Customers] and then click **Select Top 1000 Rows**
 
 ### Task 2: View the Audit Log
 
