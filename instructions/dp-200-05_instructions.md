@@ -49,7 +49,7 @@ The main task for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **+ Create a resource** blade.
 
-2. In the New screen, click the **Search the Marketplace** text box, and type the word **SQL Database**. Click **SQL Database** in the list that appears.
+2. In the New screen, click the **Search services and marketplace** text box, and type the word **SQL Database**. Click **SQL Database** in the list that appears.
 
 3. In the **SQL Database** screen, click **Create**.
 
@@ -113,7 +113,7 @@ The main tasks for this exercise are as follows:
 
 2. In the Azure portal, click **+ Create a resource**.
 
-3. In the New blade, navigate to the **Search the Marketplace** text box, and type the word **Synapse**. Click **Azure Synapse Analytics** in the list that appears.
+3. In the New blade, navigate to the **Search services and marketplace** text box, and type the word **Synapse**. Click **Azure Synapse Analytics** in the list that appears.
 
 4. In the **Azure Synapse Analytics** blade, click **Create**.
 
@@ -152,9 +152,9 @@ The main tasks for this exercise are as follows:
 
 7. Select **+ New dedicated SQL Pool**.
 
-8.. In the **basics** page of **Create dedicated SQL pool** blade configure the following settings:
+8. In the **basics** page of **Create dedicated SQL pool** blade configure the following settings:
 - Dedicated SQL pool name: **dedsqlxx**, where **xx** are your initials
-- Set the performance of the **dedsqlxx** to **DW100**
+- Set the performance of the **dedsqlxx** to **DW100c**
 - Leave all the other settings per default
 
 9. In the **Create dedicated SQL pool** screen, click **Review + create**.
@@ -210,9 +210,9 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Connect the Dedicated SQL Pool to Azure Synapse Studio
 
-1. Navigate to the **dedsqlxx** resource in your resource group. 
+1. Navigate to the **wrkspcxx** resource in your resource group. 
 
-2. In the **overview** section of the Synapse Workspace navigate to **Launch Synapse Studio**
+2. In the **overview** section of the Synapse Workspace navigate to **Open Synapse Studio**
 
 3. Click on the **Manage Hub** on the left side of the screen
 
@@ -237,15 +237,13 @@ The main tasks for this exercise are as follows:
 
 ### Task 3: Create dedicated SQL Pool tables.
 
-1. In Synapse Studio, navigate to the newly created database under **Databases** in the **Data hub**, when opening the ellipsis in the **Data hub** tab. Click on **DWDB**.
+1. In Synapse Studio, navigate to the newly created database under **Databases** in the **Data hub**, when opening the ellipsis in the **Data hub** tab. Click on **DWDB(SQL)** and click on the 3 dots next to it.
 
-2. Select the ellipsis next to the **DWDB** database.
-
-3. Select **New SQL script**, and **empty script**
+2. Select **New SQL script**, and **empty script**
 
     >**Note**: If you are unfamiliar with Transact-SQL, there is a script in the Allfiles\Solution\DP-200.5\folder named **Exercise3 Task3Step2 script.sql**. It contains the bulk of the code required to create the tables, but you do have to complete the code by selecting the distribution type to use for each table 
 
-4. Create a table named **dbo.Users** with a **clustered columnstore** index with a distribution of **replicate** with the following columns:
+3. Create a table named **dbo.Users** with a **clustered columnstore** index with a distribution of **replicate** with the following columns:
 
     | column name | data type | Nullability|
     |-------------|-----------|------------|
@@ -257,15 +255,15 @@ The main tasks for this exercise are as follows:
       >**Note**: Make sure that the script has is connected to **DWDB** and uses the database **DWDB**. 
 
 
-5. In **Synapse Studio**, click on **Run** and the query will be executed. To verify if the **dbo.Users** table was created you can click refresh and navigate to **tables** which, when expanded, should show you the table. 
+4. In **Synapse Studio**, click on **Run** and the query will be executed. To verify if the **dbo.Users** table was created you can click refresh and navigate to **tables** which, when expanded, should show you the table. 
 
-6. In Synapse Studio, navigate to the newly created database under **Databases** , when opening the ellipsis in the **Data hub** tab. Click on **DWDB**.
+5. In Synapse Studio, navigate to the newly created database under **Databases** , when opening the ellipsis in the **Data hub** tab. Click on **DWDB**.
 
-7. Select the ellipsis next to the **DWDB** database.
+6. Select the ellipsis next to the **DWDB** database.
 
-8. Select **New SQL script**, and **empty script**
+7. Select **New SQL script**, and **empty script**
 
-9. Create a table named **dbo.Products** with a **clustered columnstore** index with a distribution of **round robin** with the following columns:
+8. Create a table named **dbo.Products** with a **clustered columnstore** index with a distribution of **round robin** with the following columns:
 
     | column name | data type | Nullability|
     |-------------|-----------|------------|
@@ -282,15 +280,15 @@ The main tasks for this exercise are as follows:
 
     >**Note**: Make sure that the script has is connected to **DWDB** and uses the database **DWDB**. 
 
-10. In **Synapse Studio**, click on **Run** and the query will be executed. To verify if the **dbo.Products** table was created you can click refresh and navigate to **tables** which, when expanded, should show you the table. 
+9. In **Synapse Studio**, click on **Run** and the query will be executed. To verify if the **dbo.Products** table was created you can click refresh and navigate to **tables** which, when expanded, should show you the table. 
 
-11. In Synapse Studio, navigate to the newly created database under **Databases** , when opening the ellipsis in the **Data hub** tab. Click on **DWDB**.
+10. In Synapse Studio, navigate to the newly created database under **Databases** , when opening the ellipsis in the **Data hub** tab. Click on **DWDB**.
 
-12. Select the ellipsis next to the **DWDB** database.
+11. Select the ellipsis next to the **DWDB** database.
 
-13. Select **New SQL script**, and **empty script**
+12. Select **New SQL script**, and **empty script**
 
-14. Create a table named **dbo.FactSales** with a **clustered columnstore** index with a distribution of **Hash** on the **SalesUnit** with the following columns:
+13. Create a table named **dbo.FactSales** with a **clustered columnstore** index with a distribution of **Hash** on the **SalesUnit** with the following columns:
 
     | column name | data type | Nullability|
     |-------------|-----------|------------|
@@ -302,7 +300,7 @@ The main tasks for this exercise are as follows:
 
     >**Note**: Make sure that the script has is connected to **DWDB** and uses the database **DWDB**. 
 
-15. In **Synapse Studio**, click on **Run** and the query will be executed. To verify if the **dbo.FactSales** table was created you can click refresh and navigate to **tables** which, when expanded, should show you the table. 
+14. In **Synapse Studio**, click on **Run** and the query will be executed. To verify if the **dbo.FactSales** table was created you can click refresh and navigate to **tables** which, when expanded, should show you the table. 
 
 > **Result**: After you completed this exercise, you have used Synapse Studio to create a data warehouse named DWDB and three tables named Users, Products and FactSales.
 
@@ -371,7 +369,7 @@ The main tasks for this exercise are as follows:
 
 13. Select **New SQL script**, and **empty script**
 
-14. In the Query window, type in code that will create an external data source named **AzureStorage** for the Blob storage account and data container created in with a type of **HADOOP** that makes use of the ****AzureStorageCredential**. Note that you should replace **awdlsstudxx** in the location key with your storage account with your initials 
+14. In the Query window, type in code that will create an external data source named **AzureStorage** for the Blob storage account and data container created in with a type of **HADOOP** that makes use of the ****AzureStorageCredential**. Note that you should replace **awdlsstudxx** in the location key with your storage account with your initials.
 
     ```SQL
 	CREATE EXTERNAL DATA SOURCE AzureStorage
