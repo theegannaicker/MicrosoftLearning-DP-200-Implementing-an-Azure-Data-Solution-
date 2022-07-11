@@ -282,37 +282,26 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Install Storage Explorer.
 
-1. In the Azure portal, in the **awdlsstudxx** overview page, navigate to **Storage Explorer (preview)** and then navigate to **Containers**
-
-2. Click on the **logs** container and click on **Upload**
-
-3. On the right hand side a popup will appear and click on the **Download Azure Storage Explorer** hyperlink.
-
-4. You are taken to the following web page for [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) where there is a button that states **Download now**. click on this button.
-
-5. In the Microsoft Edge dialog box click **Save**, when the download is complete, click on **View downloads**, in the download screen in Microsoft Edge, click on **Open folder**. This will open the Downloads folder.
-
-6. Double click the file **StorageExplorer.exe**, in the User Account Control dialog box click on **Yes**.
-
-7. In the License Agreement screen, select the radio button next to **I agree the agreement**, and then click on **Install**.
+1. Install Azure Storage Explorer from here [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) where there is a button that states **Download now**. click on this button. 
+2. Install Azure Storage Explorer.  
 
    > **Note**: The installation of Storage Explorer can take approximately 4 minutes. Azure Storage Explorer allows you to easily manage the contents of your storage account with Azure Storage Explorer. Upload, download, and manage blobs, files, queues, tables, and Cosmos DB entities. It also enables you to gain easy access to manage your virtual machine disks.
 
-8. On completion of the installation, ensure that the checkbox next to **Launch Microsoft Azure Storage Explorer** is selected and then click **Finish**. Microsoft Azure Storage Explorer opens up and lists your subscriptions.
+3. On completion of the installation, ensure that the checkbox next to **Launch Microsoft Azure Storage Explorer** is selected and then click **Finish**. Microsoft Azure Storage Explorer opens up and lists your subscriptions.
 
-9. In Storage Explorer, select **Manage Accounts** to go to the **Account Management Panel**.
+4. In Storage Explorer, select **Manage Accounts** (Human icon on the left hand side bar) to go to the **Account Management Panel**.
 
-10. The left pane now displays all the Azure accounts you've signed in to. To connect to another account, select **Add an account**
+5. The left pane now displays all the Azure accounts you've signed in to. To connect to another account, select **Add an account**
 
-11. Select **Subscription**
+6. Select **Subscription**
 
-12. Select the Azure environment you will use to sign in
+7. Select the **Azure environment** you will use to sign in
 
-13. You will be redirect to a login page
+8. You will be redirect to a login page
 
-14. Select your account where the following pop up message should show up **Authenticated. You can return to Storage Explorer. You might need to authenticate again if you close this browser tab**
+9. Select your account where the following pop up message should show up **Authenticated. You can return to Storage Explorer. You might need to authenticate again if you close this browser tab**
 
-15. After you successfully sign in with an Azure account, the account and the Azure subscriptions associated with that account are added to the left pane. Select the Azure subscriptions that you want to work with, and then select **Open explorer**. The left pane displays the storage accounts associated with the selected Azure subscriptions.
+15. After you successfully sign in with an Azure account, the account and the Azure subscriptions associated with that account are added to the left pane. Select the **default directory box** and Azure subscriptions will load in few seconds, and then select **Open explorer**. The left pane displays the storage accounts associated with the selected Azure subscriptions.
 
     ![Azure Storage Explore](Linked_Image_Files/M02-E04-T01-img01.png)
 
