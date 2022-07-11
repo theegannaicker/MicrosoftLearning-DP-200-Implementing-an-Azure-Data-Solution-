@@ -133,7 +133,7 @@ The main tasks for this exercise are as follows:
 
     - **Pool**: **None**
 
-    - **Databricks Runtime Version**: **Runtime: 8.3 (Scala 2.12, Spark 3.1.1)**
+    - **Databricks Runtime Version**: **Runtime: Latest LTS Spark runtime from the list**
 
     - Make sure you select and set the **Terminate after 60** minutes of inactivity check box. If the cluster isn't being used, provide a duration (in minutes) to terminate the cluster.
 
@@ -171,7 +171,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Confirm the creation of the Databricks cluster
 
-1. Return back to Microsoft Edge, under **Interactive Clusters** confirm that the state column is set to **Running** for the cluster named **awdbclstudxx**, where **xx** are your initials.
+1. Return back to Microsoft Edge, under **Clusters** confirm that the state column is set to **Running** for the cluster named **awdbclstudxx**, where **xx** are your initials.
 
 ### Task 2: Collect the Azure Data Lake Store Gen2 account name
 
@@ -377,18 +377,17 @@ The main tasks for this exercise are as follows:
 2. In the Notebook, in the cell  **Cmd 6**, copy the following code and paste it into the cell:
 
     ```text
+    %md
     This code connects to the Data Lake Storage filesystem named "Data" and reads data in the preferences.json file stored in that data lake. Then a simple query has been created to retrieve data and the column "page" has been renamed to "bike_preference".
     ```
 
-3. In the Notebook, in the cell under **Cmd 6**, click on the **down pointing arrow** icon and click on **Move up**. Repeat until the cell appears at the top of the Notebook.
-
-4. Leave the Azure Databricks Notebook open
+3. Run the cell to see the markdown
 
     >**Note**  A future lab will explore how this data can be exported to another data platform technology
 
 > **Result**: After you completed this exercise, you have created an annotation within a notebook.
 
-### Task 4: If time permits or post course review
+### Task 4: If time permits or post course review (check with the instructor before continuing)
 
 If you have completed this lab early, the following sections provide links to content that can help you learn more about basic and advanced transformations in Azure.
 
