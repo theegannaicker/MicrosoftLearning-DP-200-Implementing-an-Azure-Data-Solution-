@@ -217,7 +217,7 @@ The main tasks for this exercise are as follows:
 
 13. In the **Add role assignment** blade, under Role, select **Storage Blob Data Contributor**.
 
-14. In the **Add role assignment** blade, under **Select**, select **DLAccess**, and then click **Save**.
+14. In the **Add role assignment** blade, click **Next**. On **Members** page search & select **DLAccess** in **+ Select Members** option, and then click **Review & Assign** to apply it.
 
 15. In the Azure portal, click the **Home** hyperlink, and then click the **Azure Active Directory** icon, Note **your role**. If you have the User role, you must make sure that non-administrators can register applications.
 
@@ -228,8 +228,6 @@ The main tasks for this exercise are as follows:
 18. In the Azure Active Directory blade, click **Properties**.
 
 19. Click on the Copy icon next to the **Tenant ID** to get your tenant ID and paste this into notepad.
-
-20. Save the notepad document in the folder **Allfiles\Labfiles\Starter\DP-200.3** as **DatabricksDetails.txt**
 
 ### Task 4: Create a Databricks Notebook and connect to a Data Lake Store.
 
