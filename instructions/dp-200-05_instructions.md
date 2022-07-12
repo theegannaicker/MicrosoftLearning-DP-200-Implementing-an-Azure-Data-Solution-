@@ -520,6 +520,6 @@ The main tasks for this exercise are as follows:
 >**Note**: Make sure that the script has is connected to **DWDB** and uses the database **DWDB**.
 
 45. In **Synapse Studio**, click on **Run** and the query will be executed.
-46. Pause the secomd dedicated sql pool **dwdb** that you created.
+46. Like you have Paused the first dedicated SQL Pool, do pause the secomd dedicated sql pool **dwdb** as well.
 
 
