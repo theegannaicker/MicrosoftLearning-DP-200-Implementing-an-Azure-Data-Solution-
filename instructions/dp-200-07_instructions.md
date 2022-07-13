@@ -486,10 +486,11 @@ No errors were found." Click on the >> to close the window.
 
 ### Task 8: Verify the output
 
-1. In Microsoft Edge, click on the tab **mynotebook - Databricks** 
+1. In Microsoft Edge, Open **Databricks** workspace 
 
-2. In the **Azure Databricks** workspace, click on **Clusters** and you can see the Job status as pending execution, running, or terminated.
+2. In the **Azure Databricks** workspace, click on **Compute** then on your **Cluster**. 
 
-3. Click on the cluster **awdbclstudxx**, and then click on the **Event Log** to view the activities.
+3. Click on the cluster **awdbclstudxx**, and then click on the **Event Log** to view the activities. It will show time when the job starts running.  
 
     > **Note**: You should see an Event Type of **Starting** with the time you triggered the pipeline run.
+4. In the **Azure Databricks** workspace, click on **Workflow** then on your **Job run** and see the details of your job.
