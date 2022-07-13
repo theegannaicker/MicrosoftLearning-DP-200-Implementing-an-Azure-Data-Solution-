@@ -433,7 +433,7 @@ The main tasks for this exercise are as follows:
 
 ![Manual Failover of Cosmos DB in the Azure portal](Linked_Image_Files/M04-E03-T02-img1.png)
 
-3. In the **awcdbstudxx - Replicate data globally** window, click on **Automatic Failover**
+3. In the **awcdbstudxx - Replicate data globally** window, click on **Service Managed Failover**
 
 4. In the "Automatic Failover" screen, click on the **ON** button, and then click on **OK**.
 
