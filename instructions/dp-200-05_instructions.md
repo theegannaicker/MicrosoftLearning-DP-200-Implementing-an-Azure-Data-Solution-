@@ -168,7 +168,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstudxx**, and then click on **wrkspcxx**, where **xx** are your initials
 
-2. In the **wrkspcxx** screen, click on **Firewalls**.
+2. In the **wrkspcxx** screen, click on **Networking**.
 
 3. In the **wrkspcxx**- Firewalls  screen, click on the option **+ Add client IP**, and check that **Allow Azure services and resources to access this workspace** is set to **On**, and then click on **Save**. On the success screen click **OK**.
 
