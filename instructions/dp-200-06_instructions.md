@@ -132,6 +132,9 @@ The main tasks for this exercise are as follows:
 
 > **Result**: After you completed this exercise, you have created an Azure Event Hub within an Event Hub Namespace and set the security for the Event Hub that can be used to provide access to the service.
 
+6. Rollback Event Hub to use TLS 1.0 (Our data generator uses TLS 1.0)
+  ![Roll back the TLS version](Linked_Image_Files/tls.png)
+
 ## Exercise 3: Starting the telecom event generator application
 
 Estimated Time: 15 minutes
