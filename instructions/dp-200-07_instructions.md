@@ -64,7 +64,7 @@ Create your data factory: Use the [Azure Portal](https://portal.azure.com) to cr
 2. In the New Data Factory screen, create a new Data Factory with the following options:
     - **Subscription**: Your subscription
     - **Resource group**: awrgstudxx
-    - **Region**: select the location closest to you    
+    - **Region**: eastus    
     - **Name**: xx-data-factory, where xx are your initials
     - **Version**: V2
     - Leave other options to their default settings
