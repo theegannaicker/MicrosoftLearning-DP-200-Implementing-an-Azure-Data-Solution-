@@ -434,7 +434,6 @@ The main tasks for this exercise are as follows:
     - **Name**: xx_dbls, where xx are your initials
     - **Account selection method**: **From Azure subscription**
     - **Azure subscription**: select the subscription you use for this lab
-    - 
     - **Databricks Workspace**: awdbwsstudxx, where xx are your initials
     - **Select cluster**: **Existing interactive cluster**
     - **Access Token**: Copy the access token from Notepad and paste into this field
@@ -459,8 +458,7 @@ The main tasks for this exercise are as follows:
 6. In the properties for the **Notebook1** window at the bottom, complete the following steps:
     - Switch to the **Azure Databricks** tab.
     - Select **xx_dbls** which you created in the previous procedure.
-
-    - Switch to the **Settings** tab, and put **/adftutorial/mynotebook** in Notebook path.
+    - Switch to the **Settings** tab, and browse to **/adftutorial/mynotebook** in Notebook path. 
     - Expand **Base Parameters**, and then click on **+ New**
     - Create a parameter with the Name of **input**, with a value of **@pipeline().parameters.name**
 
