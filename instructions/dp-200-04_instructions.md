@@ -291,7 +291,7 @@ The main tasks for this exercise are as follows:
 
     > **Note**: A New Stored Procedure screen appears which shows a sample stored procedure .
 
-2. In the New Stored Procedure screen, in the **Stored Procedure Id** text box, type **createMyDocument**.
+2. In the New Stored Procedure screen, in the **Stored Procedure Id** text box, type **createMyDocument**. (Note: if the save button is still greyed out then remove and type in the Stored Procedure name again)
 
 3. Use the following code to create a stored procedure in the Stored Procedure Body.
 
