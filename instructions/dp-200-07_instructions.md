@@ -386,7 +386,7 @@ The main tasks for this exercise are as follows:
 
 2. Click on **Launch Workspace**
 
-3. Click the user **profile icon** in the upper right corner of your Databricks workspace.
+3. Find the **user settings** in the Lower left corner of your Databricks workspace.
 
 4. Click **User Settings**.
 
