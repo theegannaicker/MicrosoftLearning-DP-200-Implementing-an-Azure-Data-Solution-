@@ -127,11 +127,9 @@ The main tasks for this exercise are as follows:
 
 3. In the **Create Cluster** screen, under New Cluster, create a Databricks Cluster with the following settings, and then click on **Create Cluster**:
 
-    - **Cluster name**: **awdbclstudxx**, where **xx** are your initials.
+    - **Cluster name**: **awdbclstudxx**, where **xx** are your initials or any other suitable name 
 
-    - **Cluster Mode**: **Standard**
-
-    - **Pool**: **None** (Removed in the new databricks update)
+    - **Cluster Mode**: **Multi Node**
 
     - **Databricks Runtime Version**: **Runtime: Select latest 10.X LTS Spark runtime from the list**
 
