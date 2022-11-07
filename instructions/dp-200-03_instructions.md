@@ -133,7 +133,7 @@ The main tasks for this exercise are as follows:
 
     - **Databricks Runtime Version**: **Runtime: Select latest 10.X LTS Spark runtime from the list**
 
-    - Make sure you select and set the **Terminate after 60** minutes of inactivity check box. If the cluster isn't being used, provide a duration (in minutes) to terminate the cluster.
+    - Make sure you select and set the **Terminate after 120** minutes of inactivity check box. If the cluster isn't being used, provide a duration (in minutes) to terminate the cluster.
 
     - **Min Workers**: **1**
 
