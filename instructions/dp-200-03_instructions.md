@@ -383,6 +383,7 @@ The main tasks for this exercise are as follows:
 
 > **Result**: After you completed this exercise, you have created an annotation within a notebook.
 
+<!--
 ### Task 4: If time permits or post course review (check with the instructor before continuing)
 
 If you have completed this lab early, the following sections provide links to content that can help you learn more about basic and advanced transformations in Azure.
@@ -450,3 +451,5 @@ Follow the instructions within the notebook, until you've completed the entire n
 - **Custom-Transformations** - This notebook is located in the Optional subfolder, and includes a sample project for you to explore later on in your own time.
 
 >[Note] You'll find corresponding notebooks within the Solutions subfolder. These contain completed cells for exercises that ask you to complete one or more challenges. Refer to these if you get stuck or simply want to see the solution.
+
+-->
