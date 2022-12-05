@@ -269,7 +269,7 @@ The main tasks for this exercise are as follows:
     - **Output alias**: **PhoneCallRefData**
     - **Select Event Hub from your subscriptions**: checked
     - **Subscription**: Your subscription name
-    - **Storage account**: **:awsastudxx**:, where xx is your initials
+    - **Storage account**: **:awsastudxx**:, where xx is your initials (Note: If you do not see any listed storage account then make one first https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal)
     - **Container**: **Use existing** and select **phonecalls**
     - **Authentication mode**: select **Connection string**
     - Leave the rest of the entries as default values. Finally, click **Save**.
