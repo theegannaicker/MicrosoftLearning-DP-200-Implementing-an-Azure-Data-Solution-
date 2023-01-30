@@ -1,9 +1,4 @@
-ask 4: If time permits or post course review
-If you have completed this lab early, the following sections provide links to content that can help you learn more about basic and advanced transformations in Azure.
-
-If the url are inaccessible, there is a copy of the notebooks ion the Allfiles\Labfiles\Starter\DP-200.3\Post Course Review folder
-
-Basic transformations
+## Basic transformations
 
 Within the Workspace, using the command bar on the left, select Workspace, Users, and select your username (the entry with house icon).
 
@@ -30,7 +25,7 @@ Follow the instructions within the notebook, until you've completed the entire n
 Parsing-Nested-Data - This notebook is located in the Optional subfolder, and includes a sample project for you explore later on in your own time.
 [Note] You'll find corresponding notebooks within the Solutions subfolder. These contain completed cells for exercises that ask you to complete one or more challenges. Refer to these if you get stuck or simply want to see the solution.
 
-Advanced transformations
+## Advanced transformations
 
 Within the Workspace, using the command bar on the left, select Workspace, Users, and select your username (the entry with house icon).
 
