@@ -98,7 +98,7 @@ The main tasks for this exercise are as follows:
     - **Pricing Tier**: **Premium (+ Role-based access controls)**.
 
 
-        ![Creating Azure Databricks in the Azure portal](Linked_Image_Files/M03-E02-T01-img01.png)
+        ![Creating Azure Databricks in the Azure portal](Linked_Image_Files/ScreenShot00811.png)
 
 6. In the **Azure Databricks Service** blade, click **Review +create**. Then click **Create**
 
