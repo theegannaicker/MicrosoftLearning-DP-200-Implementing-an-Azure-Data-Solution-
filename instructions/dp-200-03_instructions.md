@@ -231,31 +231,31 @@ The main tasks for this exercise are as follows:
 
 15. Save the configuration by clicking **Review & Assign**.
 
-16. In the Azure Active Directory blade, click **Properties**.
+16. Goto Azure Active Directory blade.
+
+16. In the Azure Active Directory blade, click **Overview**.
 
     ![Adding a client secret in the Azure portal](Linked_Image_Files/ScreenShot00819.png)
 
-17. Click on the Copy icon next to the **Tenant ID** to get your tenant ID and paste this into notepad.
+17. Click on the Copy icon next to the **Tenant ID** to get your tenant ID and paste this into notepad. You will use this value later on. 
 
 ### Task 4: Create a Databricks Notebook and connect to a Data Lake Store.
 
-1. In Microsoft Edge, click on the tab **Clusters - Databricks**
+1. In the Azure Databricks blade on the left of Microsoft Edge, click on **Workspace**, click on the drop down next to **Workspace**, and click on the dropdown next to **Users**. Then click on the drop down next to your username and point to **Create** and then click on **Notebook**.
 
-    > **Note**: You will see the Clusters page.
+    ![Creating a Notebook in Azure Databricks](Linked_Image_Files/ScreenShot00823.png)
 
-2. In the Azure Databricks blade on the left of Microsoft Edge, click on **Workspace**, click on the drop down next to **Workspace**, and click on the dropdown next to **Users**. Then click on the drop down next to your username and point to **Create** and then click on **Notebook**.
+2. In the **Create Notebook** screen, next to Name type **My Notebook**.
 
-3. In the **Create Notebook** screen, next to Name type **My Notebook**.
+3. Next to the **Default Language** drop down list, select **Scala**.
 
-4. Next to the **Default Language** drop down list, select **Scala**.
-
-5. Ensure that the Cluster states the name of the cluster that you have created earlier, click on **Create**
+4. Ensure that the Cluster states the name of the cluster that you have created earlier, click on **Create**
 
     ![Creating a Notebook in Azure Databricks](Linked_Image_Files/M03-E03-T04-img01.png)
 
      > **Note**: This will open up a Notebook with the title My Notebook (Scala).
 
-6. In the Notebook, in the cell  **Cmd 1**, copy the following code and paste it into the cell:
+5. In the Notebook, in the cell  **Cmd 1**, copy the following code and paste it into the cell:
 
     ```scala
     //Connect to Azure Data Lake Storage Gen2 account
@@ -267,7 +267,7 @@ The main tasks for this exercise are as follows:
     spark.conf.set("fs.azure.account.oauth2.client.endpoint.<storage-account-name>.dfs.core.windows.net", "https://login.microsoftonline.com/<tenant-id>/oauth2/token")
     ```
 
-7. In this code block, replace the **application-id**, **authentication-key**, **tenant-id**, and **storage-account-name** placeholder values in this code block* with the values that you collected earlier and are held in notepad.
+6. In this code block, replace the **application-id**, **authentication-key**, **tenant-id**, and **storage-account-name** placeholder values in this code block* with the values that you collected earlier and are held in notepad.
 
     - **storage-account-name**: **awdlsstudxx**, where **xx** are your initials.
 
@@ -278,7 +278,7 @@ The main tasks for this exercise are as follows:
     - **tenant-id**: this ID you should have saved but can be find through Microsoft_AAD_IAM -> ActiveDirectoryMenuBlade -> Properties
 
 
-8. In the Notebook, in the cell under **Cmd 1**, click on the **Run** icon and click on **Run Cell** as highlighted in the following graphic. 
+7. In the Notebook, in the cell under **Cmd 1**, click on the **Run** icon and click on **Run Cell** as highlighted in the following graphic. 
 
     ![Running cvode in a Notebook in Azure Databricks](Linked_Image_Files/M03-E03-T04-img02.png)
 
