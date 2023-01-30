@@ -122,15 +122,17 @@ The main tasks for this exercise are as follows:
 
     > **Note**: You will be signed into the Azure Databricks Workspace in a separate tab in Microsoft Edge.
 
-2. Under **Common Tasks**, click **New Cluster**.
+2. Under **Common Tasks**, click **Compute**.
 
-3. In the **Create Cluster** screen, under New Cluster, create a Databricks Cluster with the following settings, and then click on **Create Cluster**:
+     ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/ScreenShot00812.png)
+
+3. In the **Create Compute** screen, under New Cluster, create a Databricks Cluster with the following settings, and then click on **Create Cluster**:
 
     - **Cluster name**: **awdbclstudxx**, where **xx** are your initials or any other suitable name 
 
     - **Cluster Mode**: **Multi Node**
 
-    - **Databricks Runtime Version**: **Runtime: Select latest 10.X LTS Spark runtime from the list**
+    - **Databricks Runtime Version**: **Runtime: Select 10.X LTS Spark runtime from the list**
 
     - Make sure you select and set the **Terminate after 120** minutes of inactivity check box. If the cluster isn't being used, provide a duration (in minutes) to terminate the cluster.
 
@@ -142,11 +144,13 @@ The main tasks for this exercise are as follows:
 
         ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/M03-E02-T03-img01.png)
 
-4. In the **Create Cluster** screen, click on **Create Cluster** and leave the Microsoft Edge screen open.
+4. In the **Compute** screen
 
-> **Note**: The creation of the Azure Databricks instance will take approximately 10 minutes as the creation of a Spark cluster is simplified through the graphical user interface. You will note that the **State** of **Pending** whilst the cluster is being created. This will change to **Running** when the Cluster is created.
+        ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/ScreenShot00814.png)
 
-> **Note**: While the cluster is being created, **go back and perform Exercise 1**.
+> **Note**: The creation of the Azure Databricks instance will take approximately 10 minutes as the creation of a Spark cluster is simplified through the graphical user interface. You will note that the **State** of **Pending** whilst the cluster is being created. This will change to **Running** when the Cluster is created. If you get **QuotaExceeded, error message: Operation could not be completed as it results in exceeding approved Total Regional Cores quota** error than delete the existing cluster and create a new single node cluster. 
+
+       ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/ScreenShot00815.png)
 
 ## Exercise 3: Read data with Azure Databricks
 
@@ -168,13 +172,13 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Confirm the creation of the Databricks cluster
 
-1. Return back to Microsoft Edge, under **Clusters** confirm that the state column is set to **Running** for the cluster named **awdbclstudxx**, where **xx** are your initials.
+1. Return back to Microsoft Edge, under **Compute** confirm that the cluster named **awdbclstudxx**, where **xx** are your initials is **Running** (Green) 
 
 ### Task 2: Collect the Azure Data Lake Store Gen2 account name
 
 1. In Microsoft Edge, click on the  Azure portal tab, click **Resource groups**, and then click **awrgstudxx**, and then click on **awdlsstudxx**, where **xx** are your initials.
 
-2. In the **awdlsstudxx** screen, under settings, click on **Access keys**, and then click on the copy icon next to the **Storage account name**, and paste it into Notepad.
+2. Find your datalake named **awdlsstudxx** in the resource group. In the **awdlsstudxx** screen, under settings, click on **Access keys**, and then click on the copy (Show key) icon next to the **Storage account name**, and paste it into a Notepad.
 
     ![Accessing Data Lake Storage account name in the Azure portal](Linked_Image_Files/M03-E03-T02-img01.png)
 
@@ -186,7 +190,7 @@ The main tasks for this exercise are as follows:
 
 3. In the **Microsoft - App registrations** screen, click on the **+ New registration** button.
 
-4. In the register an application screen, provide the **name** of **DLAccess** and under the **Redirect URI (optional)** section, ensure **Web** is selected and type **http://localhost**for the application value. After setting the values.
+4. In the register an application screen, provide the **name** of **DLAccess** and under the **Redirect URI (optional)** section, ensure **Web** is selected and type **http://localhost/exampleapp**for the application value. After setting the values.
 
     ![Registering an application in the Azure portal](Linked_Image_Files/M03-E03-T03-img01.png)
 
@@ -200,31 +204,35 @@ The main tasks for this exercise are as follows:
 
     ![Adding a client secret in the Azure portal](Linked_Image_Files/M03-E03-T03-img02.png)
 
-    >**Important**: When you click on **Add**, the key will appear as shown in the graphic below. Make sure you copy the **Value** and the **Secret ID** and paste it in a notepad. 
+    >**Important**: When you click on **Add**, the key will appear as shown in the graphic below. Make sure you copy the **Value** and the **Secret ID** and paste it in a notepad. **Value** will be used later on.  
 
     ![Location of the DLAccess Key](Linked_Image_Files/M03-E03-T03-img03.png)
 
 9. Assign the Storage Blob Data Contributor permission to your resource group. In the Azure portal, click on the **Home** hyperlink, and then the **Resource groups** icon, click on the resource group **awrgstudxx**, where **xx** are your initials.
 
-10. In the **awrgstudxx** screen, click on **Access Control (IAM)** 
+10. Find your datalake named **awdlsstudxx** in the resource group. In the **awdlsstudxx** screen click on **Access Control (IAM)** 
 
 11. Click on the **Role assignments** tab. 
+
+    ![Adding a client secret in the Azure portal](Linked_Image_Files/ScreenShot00816.png)
+
 
 12. Click **+ Add**, and click **Add role assignment**
 
 13. In the **Add role assignment** blade, under Role, select **Storage Blob Data Contributor**.
 
+    ![Adding a client secret in the Azure portal](Linked_Image_Files/ScreenShot00817.png)
+
+
 14. In the **Add role assignment** blade, click **Next**. On **Members** page search & select **DLAccess** in **+ Select Members** option, and then click **Review & Assign** to apply it.
 
-15. In the Azure portal, click the **Home** hyperlink, and then click the **Azure Active Directory** icon, Note **your role**. If you have the User role, you must make sure that non-administrators can register applications.
+    ![Adding a client secret in the Azure portal](Linked_Image_Files/ScreenShot00818.png)
 
-16. Click **Users**, and then click **User settings**. Check the **App registrations** setting. This value can only be set by an administrator. If set to **Yes**, any user in the Azure AD tenant can register an app. 
+17. In the Azure Active Directory blade, click **Properties**.
 
-17. Close down the **Users - All users** screen.
+    ![Adding a client secret in the Azure portal](Linked_Image_Files/ScreenShot00819.png)
 
-18. In the Azure Active Directory blade, click **Properties**.
-
-19. Click on the Copy icon next to the **Tenant ID** to get your tenant ID and paste this into notepad.
+18. Click on the Copy icon next to the **Tenant ID** to get your tenant ID and paste this into notepad.
 
 ### Task 4: Create a Databricks Notebook and connect to a Data Lake Store.
 
