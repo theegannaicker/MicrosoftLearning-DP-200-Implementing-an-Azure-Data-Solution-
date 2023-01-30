@@ -144,11 +144,11 @@ The main tasks for this exercise are as follows:
 
       ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/M03-E02-T03-img01.png)
 
-4. In the **Compute** screen
+4. From the **Compute** screen you can see the status of your cluster.  
 
       ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/ScreenShot00814.png)
 
-> **Note**: The creation of the Azure Databricks instance will take approximately 10 minutes as the creation of a Spark cluster is simplified through the graphical user interface. You will note that the **State** of **Pending** whilst the cluster is being created. This will change to **Running** when the Cluster is created. If you get **QuotaExceeded, error message: Operation could not be completed as it results in exceeding approved Total Regional Cores quota** error than delete the existing cluster and create a new single node cluster. 
+> **Note**: The creation of the Azure Databricks instance will take approximately 10 minutes as the creation of a Spark cluster is simplified through the graphical user interface. You will note that the **State** of **Pending** whilst the cluster is being created. This will change to **Running** when the Cluster is created. If you get **QuotaExceeded, error message: Operation could not be completed as it results in exceeding approved Total Regional Cores quota** error than delete the existing cluster and create a new single node cluster. Otherwise skip the screenshot below and continue from **Exercise 3: Read data with Azure Databricks**  
 
    ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/ScreenShot00815.png)
 
@@ -174,13 +174,15 @@ The main tasks for this exercise are as follows:
 
 1. Return back to Microsoft Edge, under **Compute** confirm that the cluster named **awdbclstudxx**, where **xx** are your initials is **Running** (Green) 
 
+    ![Accessing Data Lake Storage account name in the Azure portal](Linked_Image_Files/ScreenShot00820.png)
+
 ### Task 2: Collect the Azure Data Lake Store Gen2 account name
 
 1. In Microsoft Edge, click on the  Azure portal tab, click **Resource groups**, and then click **awrgstudxx**, and then click on **awdlsstudxx**, where **xx** are your initials.
 
 2. Find your datalake named **awdlsstudxx** in the resource group. In the **awdlsstudxx** screen, under settings, click on **Access keys**, and then click on the copy (Show key) icon next to the **Storage account name**, and paste it into a Notepad.
 
-    ![Accessing Data Lake Storage account name in the Azure portal](Linked_Image_Files/M03-E03-T02-img01.png)
+    ![Accessing Data Lake Storage account name in the Azure portal](Linked_Image_Files/ScreenShot00821.png)
 
 ### Task 3: Enable your Databricks instance to access the Data Lake Gen2 Store.
 
@@ -223,16 +225,17 @@ The main tasks for this exercise are as follows:
 
     ![Adding a client secret in the Azure portal](Linked_Image_Files/ScreenShot00817.png)
 
-
-14. In the **Add role assignment** blade, click **Next**. On **Members** page search & select **DLAccess** in **+ Select Members** option, and then click **Review & Assign** to apply it.
+14. In the **Add role assignment** blade, click **Next**. On **Members** page search & select **DLAccess** from **+ Select Members** option, and then click **Select**. 
 
     ![Adding a client secret in the Azure portal](Linked_Image_Files/ScreenShot00818.png)
 
-17. In the Azure Active Directory blade, click **Properties**.
+15. Save the configuration by clicking **Review & Assign**.
+
+16. In the Azure Active Directory blade, click **Properties**.
 
     ![Adding a client secret in the Azure portal](Linked_Image_Files/ScreenShot00819.png)
 
-18. Click on the Copy icon next to the **Tenant ID** to get your tenant ID and paste this into notepad.
+17. Click on the Copy icon next to the **Tenant ID** to get your tenant ID and paste this into notepad.
 
 ### Task 4: Create a Databricks Notebook and connect to a Data Lake Store.
 
