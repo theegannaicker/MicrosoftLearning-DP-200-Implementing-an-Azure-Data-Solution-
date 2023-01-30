@@ -13,10 +13,9 @@ By the end of this lab the student will be able to explain why Azure Databricks 
   
 After completing this lab, you will be able to:
 
-1. Explain Azure Databricks
-2. Work with Azure Databricks
-3. Read data with Azure Databricks
-4. Perform transformations with Azure Databricks
+1. Worked with Azure Databricks
+2. Read data with Azure Databricks
+3. Performed transformations with Azure Databricks
 
 ## Exercise 1: Read the scenario
   
