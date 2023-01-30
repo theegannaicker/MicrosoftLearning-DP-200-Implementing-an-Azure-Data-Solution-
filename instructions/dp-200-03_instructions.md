@@ -142,15 +142,15 @@ The main tasks for this exercise are as follows:
 
     - Leave all the remaining options to their current settings.
 
-        ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/M03-E02-T03-img01.png)
+      ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/M03-E02-T03-img01.png)
 
 4. In the **Compute** screen
 
-        ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/ScreenShot00814.png)
+      ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/ScreenShot00814.png)
 
 > **Note**: The creation of the Azure Databricks instance will take approximately 10 minutes as the creation of a Spark cluster is simplified through the graphical user interface. You will note that the **State** of **Pending** whilst the cluster is being created. This will change to **Running** when the Cluster is created. If you get **QuotaExceeded, error message: Operation could not be completed as it results in exceeding approved Total Regional Cores quota** error than delete the existing cluster and create a new single node cluster. 
 
-       ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/ScreenShot00815.png)
+   ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/ScreenShot00815.png)
 
 ## Exercise 3: Read data with Azure Databricks
 
