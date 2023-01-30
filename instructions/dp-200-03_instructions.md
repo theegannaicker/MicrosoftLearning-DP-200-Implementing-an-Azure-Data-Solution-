@@ -3,8 +3,6 @@
 
 **Estimated Time**: 75 minutes
 
-**Pre-requisites**: It is assumed that the case study for this lab has already been read. It is assumed that the content and lab for module 1: Azure for the Data Engineer has also been completed
-
 **Lab files**: The files for this lab are located in the _Allfiles\Labfiles\Starter\DP-200.3_ folder.
 
 ## Lab overview
@@ -20,7 +18,7 @@ After completing this lab, you will be able to:
 3. Read data with Azure Databricks
 4. Perform transformations with Azure Databricks
 
-## Scenario
+## Exercise 1: Read the scenario
   
 In response to the Information Services (IS) department, you will start the process of building a predictive analytics platform by listing out the benefits of using the technology. The department will be joined by data scientists and they want to ensure that there is a predictive analytics environment available to the new team members.
 
@@ -28,10 +26,11 @@ You will stand up and provision an Azure Databricks environment, and then test t
 
 At the end of this lad, you will have:
 
-1. Explained Azure Databricks
-2. Worked with Azure Databricks
-3. Read data with Azure Databricks
-4. Performed transformations with Azure Databricks
+1. Worked with Azure Databricks
+2. Read data with Azure Databricks
+3. Performed transformations with Azure Databricks
+
+<!--
 
 > **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
 
@@ -60,6 +59,7 @@ The main task for this exercise are as follows:
 1. The instructor will stop the group to discuss the findings.
 
 > **Result**: After you completed this exercise, you have created a Microsoft Word document that identifies the digital transformation requirement that Azure Databricks will meet and a candidate data source.
+-->
 
 ## Exercise 2: Work with Azure Databricks
   
