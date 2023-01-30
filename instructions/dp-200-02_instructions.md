@@ -35,6 +35,7 @@ At the end of this work, you will have:
 
 > **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
 
+<!--
 ## Exercise 1: Choose a data storage approach in Azure
 
 Estimated Time: 15 minutes
@@ -58,6 +59,7 @@ The main task for this exercise are as follows:
 1. The instructor will stop the group to discuss the findings.
 
 > **Result**: After you completed this exercise, you have created a Microsoft Word document that shows two tables of data storage requirements.
+--> 
 
 ## Exercise 2: Create an Azure Storage Account
   
