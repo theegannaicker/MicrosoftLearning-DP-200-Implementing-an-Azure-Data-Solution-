@@ -3,10 +3,6 @@
 
 **Estimated Time**: 60 minutes
 
-**Pre-requisites**: It is assumed that the case study for this lab has already been read. It is assumed that the content and lab for module 1: Azure for the Data Engineer has also been completed
-
-**Lab files**: The files for this lab are located in the _Allfiles\Labfiles\Starter\DP-200.2_ folder.
-
 ## Lab overview
 
 In this lab, the students will be able to determine the appropriate storage type to implement against a given set of business and technical requirements. They will be able to create Azure storage accounts and Data Lake Storage account and explain the difference between Data Lake Storage version 1 and version 2. They will also be able to demonstrate how to perform data loads into the data storage of choice.
@@ -15,12 +11,11 @@ In this lab, the students will be able to determine the appropriate storage type
   
 After completing this lab, you will be able to:
 
-1. Choose a data storage approach in Azure
-2. Create an Azure Storage Account
-3. Explain Azure Data Lake Storage
-4. Upload data into Azure Data Lake
+1. Create an Azure Storage Account
+2. Explain Azure Data Lake Storage
+3. Upload data into Azure Data Lake
 
-## Scenario
+## Exercise 1: Read the scenario
   
 You have been hired as a Senior Data Engineer to implement a technology solution that is part of a digital transformation project. The organization is migrating an Internet Information Services (IIS) that hosts the company website to Azure. The developers are in the process of transferring the web application and its logic to Azure Web Apps and they have asked you to prepare a data store for them that can be used to host the static images that are used on the website.
 
@@ -28,12 +23,9 @@ In addition, the information services department have informed you that their te
 
 At the end of this work, you will have:
 
-1. Chosen a data storage approach in Azure
-2. Created an Azure Storage Account
-3. Explained Azure Data Lake Storage
-4. Uploaded data into Azure Data Lake
-
-> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
+1. Create an Azure Storage Account
+2. Explain Azure Data Lake Storage
+3. Upload data into Azure Data Lake
 
 <!--
 ## Exercise 1: Choose a data storage approach in Azure
