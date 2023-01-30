@@ -285,11 +285,15 @@ The main tasks for this exercise are as follows:
 
 4. In Storage Explorer, select **Manage Accounts** (Human icon on the left hand side bar) to go to the **Account Management Panel**.
 
-5. The left pane now displays all the Azure accounts you've signed in to. To connect to another account, select **Add an account**
+    ![Azure Storage Explore](Linked_Image_Files/ScreenShot00807.png)
+
+5. The left pane now displays all the Azure accounts you've signed in to. To connect to another account, select **Sign in with Azure...**
 
 6. Select **Subscription**
 
 7. Select the **Azure environment** you will use to sign in
+
+   ![Azure Storage Explore](Linked_Image_Files/ScreenShot00808.png)
 
 8. You will be redirect to a login page
 
@@ -297,7 +301,11 @@ The main tasks for this exercise are as follows:
 
 15. After you successfully sign in with an Azure account, the account and the Azure subscriptions associated with that account are added to the left pane. Select the **default directory box** and Azure subscriptions will load in few seconds, and then select **Open explorer**. The left pane displays the storage accounts associated with the selected Azure subscriptions.
 
-    ![Azure Storage Explore](Linked_Image_Files/M02-E04-T01-img01.png)
+   ![Azure Storage Explore](Linked_Image_Files/ScreenShot00809.png)
+   
+   ![Azure Storage Explore](Linked_Image_Files/ScreenShot00810.png)
+
+   ![Azure Storage Explore](Linked_Image_Files/M02-E04-T01-img01.png)
 
 ### Task 2: Upload data files to the data and logs container of the Data Lake Gen II Storage Account.
 
