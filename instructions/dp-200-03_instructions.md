@@ -463,3 +463,17 @@ Follow the instructions within the notebook, until you've completed the entire n
 >[Note] You'll find corresponding notebooks within the Solutions subfolder. These contain completed cells for exercises that ask you to complete one or more challenges. Refer to these if you get stuck or simply want to see the solution.
 
 -->
+
+### Task 4: Connecting-to-JDBC
+
+1. Within the Workspace, using the command bar on the left, select **Workspace**, **Users**, and select **your username** (the entry with house icon).
+
+2. In the blade that appears, select the **downwards pointing chevron next to your name**, and select **Import**.
+
+3. On the Import Notebooks dialog, select **URL below** and paste in the following URL: 
+
+```url
+https://github.com/azuredevops619/MicrosoftLearning-DP-200-Implementing-an-Azure-Data-Solution-/blob/master/Labfiles/Starter/04-Connecting-to-JDBC.dbc
+```
+
+4. Select **Import**.
