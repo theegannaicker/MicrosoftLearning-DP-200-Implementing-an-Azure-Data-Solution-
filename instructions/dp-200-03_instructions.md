@@ -477,3 +477,4 @@ https://github.com/azuredevops619/MicrosoftLearning-DP-200-Implementing-an-Azure
 ```
 
 4. Select **Import**.
+5. Follow and run the steps in the notebooks 
