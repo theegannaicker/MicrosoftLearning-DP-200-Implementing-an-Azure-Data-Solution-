@@ -243,17 +243,15 @@ The main tasks for this exercise are as follows: (Detailed steps are under Task 
 
     ![Creating a Notebook in Azure Databricks](Linked_Image_Files/ScreenShot00823.png)
 
-2. In the **Create Notebook** screen, next to Name type **My Notebook**.
+2. After you click on **Create Notebook**. Name the notebook as **My Notebook**. Select **Scala** as the notebook language. 
 
-3. Next to the **Default Language** drop down list, select **Scala**.
+![Creating a Notebook in Azure Databricks](Linked_Image_Files/M03-E03-T04-img01.png)
 
-4. Ensure that the Cluster states the name of the cluster that you have created earlier, click on **Create**
-
-    ![Creating a Notebook in Azure Databricks](Linked_Image_Files/M03-E03-T04-img01.png)
+3. Ensure that the Cluster states the name of the cluster that you have created earlier, click on **Create**
 
      > **Note**: This will open up a Notebook with the title My Notebook (Scala).
 
-5. In the Notebook, in the cell  **Cmd 1**, copy the following code and paste it into the cell:
+4. In the Notebook, in the cell  **Cmd 1**, copy the following code and paste it into the cell:
 
     ```scala
     //Connect to Azure Data Lake Storage Gen2 account
@@ -265,7 +263,7 @@ The main tasks for this exercise are as follows: (Detailed steps are under Task 
     spark.conf.set("fs.azure.account.oauth2.client.endpoint.<storage-account-name>.dfs.core.windows.net", "https://login.microsoftonline.com/<tenant-id>/oauth2/token")
     ```
 
-6. In this code block, replace the **application-id**, **authentication-key**, **tenant-id**, and **storage-account-name** placeholder values in this code block* with the values that you collected earlier and are held in notepad.
+5. In this code block, replace the **application-id**, **authentication-key**, **tenant-id**, and **storage-account-name** placeholder values in this code block* with the values that you collected earlier and are held in notepad.
 
     - **storage-account-name**: **awdlsstudxx**, where **xx** are your initials.
 
@@ -276,7 +274,7 @@ The main tasks for this exercise are as follows: (Detailed steps are under Task 
     - **tenant-id**: this ID you should have saved but can be find through Microsoft_AAD_IAM -> ActiveDirectoryMenuBlade -> Properties
 
 
-7. In the Notebook, in the cell under **Cmd 1**, click on the **Run** icon and click on **Run Cell** as highlighted in the following graphic. 
+6. In the Notebook, in the cell under **Cmd 1**, click on the **Run** icon and click on **Run Cell** as highlighted in the following graphic. 
 
     ![Running cvode in a Notebook in Azure Databricks](Linked_Image_Files/M03-E03-T04-img02.png)
 
