@@ -122,7 +122,9 @@ The main tasks for this exercise are as follows:
 
     > **Note**: You will be signed into the Azure Databricks Workspace in a separate tab in Microsoft Edge.
 
-2. Under **Common Tasks**, click **Compute**.
+**Note**: Due to constant UI updates by databricks, portal colour and icons may look different however the functionality doesnt change.    
+
+2. Under **Common Tasks**, click **Compute**. 
 
      ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/ScreenShot00812.png)
 
@@ -130,15 +132,13 @@ The main tasks for this exercise are as follows:
 
     - **Cluster name**: **awdbclstudxx**, where **xx** are your initials or any other suitable name 
 
-    - **Cluster Mode**: **Multi Node**
+    - **Cluster Mode**: **Single Node** (using the radio button)
 
-    - **Databricks Runtime Version**: **Runtime: Select 10.X LTS Spark runtime from the list**
+    - **Databricks Runtime Version**: **Runtime: Select 10.4 LTS Spark runtime from the list**
+    
+    - Node type: **Standard_DS3_v2**
 
     - Make sure you select and set the **Terminate after 120** minutes of inactivity check box. If the cluster isn't being used, provide a duration (in minutes) to terminate the cluster.
-
-    - **Min Workers**: **1**
-
-    - **Max Workers**: **2**
 
     - Leave all the remaining options to their current settings.
 
@@ -148,9 +148,7 @@ The main tasks for this exercise are as follows:
 
       ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/ScreenShot00814.png)
 
-> **Note**: The creation of the Azure Databricks instance will take approximately 10 minutes as the creation of a Spark cluster is simplified through the graphical user interface. You will note that the **State** of **Pending** whilst the cluster is being created. This will change to **Running** when the Cluster is created. If you get **QuotaExceeded, error message: Operation could not be completed as it results in exceeding approved Total Regional Cores quota** error than delete the existing cluster and create a new single node cluster. Otherwise skip the screenshot below and continue from **Exercise 3: Read data with Azure Databricks**  
-
-   ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/ScreenShot00815.png)
+> **Note**: The creation of the Azure Databricks instance will take approximately 4-8 minutes as the creation of a Spark cluster is simplified through the graphical user interface. You will note that the **State** of **Pending** whilst the cluster is being created. This will change to **Running** when the Cluster is created.
 
 ## Exercise 3: Read data with Azure Databricks
 
@@ -158,7 +156,7 @@ Estimated Time: 30 minutes
 
 Individual exercise
 
-The main tasks for this exercise are as follows:
+The main tasks for this exercise are as follows: (Detailed steps are under Task 1 below)
 
 1. Confirm that the Databricks cluster has been created.
 
@@ -178,7 +176,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 2: Collect the Azure Data Lake Store Gen2 account name
 
-1. In Microsoft Edge, click on the  Azure portal tab, click **Resource groups**, and then click **awrgstudxx**, and then click on **awdlsstudxx**, where **xx** are your initials.
+1. In Microsoft Edge, click on the  Azure portal tab, click **Resource groups**, and then click **awrgstudxx**, and then click on **awdlsstudxx** (your ADLS), where **xx** are your initials.
 
 2. Find your datalake named **awdlsstudxx** in the resource group. In the **awdlsstudxx** screen, under settings, click on **Access keys**, and then click on the copy (Show key) icon next to the **Storage account name**, and paste it into a Notepad.
 
@@ -192,7 +190,7 @@ The main tasks for this exercise are as follows:
 
 3. In the **Microsoft - App registrations** screen, click on the **+ New registration** button.
 
-4. In the register an application screen, provide the **name** of **DLAccess** and under the **Redirect URI (optional)** section, ensure **Web** is selected and type **http://localhost/exampleapp**for the application value. After setting the values.
+4. In the register an application screen, provide the **name** of **DLAccessxx** where **xx** are your initials (add a random number or string to make the name unique if you are receiving resource with the name already existing error) and under the **Redirect URI (optional)** section, ensure **Web** is selected and type **http://localhost**for the application value. After setting the values.
 
     ![Registering an application in the Azure portal](Linked_Image_Files/M03-E03-T03-img01.png)
 
@@ -206,7 +204,7 @@ The main tasks for this exercise are as follows:
 
     ![Adding a client secret in the Azure portal](Linked_Image_Files/M03-E03-T03-img02.png)
 
-    >**Important**: When you click on **Add**, the key will appear as shown in the graphic below. Make sure you copy the **Value** and the **Secret ID** and paste it in a notepad. **Value** will be used later on.  
+    >**Important**: When you click on **Add**, the key will appear as shown in the graphic below. Make sure you copy the **Value** and the **Secret ID** and paste it in a notepad. **Value** will be used later on in **databricks notebook**.  
 
     ![Location of the DLAccess Key](Linked_Image_Files/M03-E03-T03-img03.png)
 
@@ -221,7 +219,7 @@ The main tasks for this exercise are as follows:
 
 12. Click **+ Add**, and click **Add role assignment**
 
-13. In the **Add role assignment** blade, under Role, select **Storage Blob Data Contributor**.
+13. In the **Add role assignment** blade, under **Assignment type** select **Job function roles**, now under Role, select **Storage Blob Data Contributor**.
 
     ![Adding a client secret in the Azure portal](Linked_Image_Files/ScreenShot00817.png)
 
@@ -241,7 +239,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 4: Create a Databricks Notebook and connect to a Data Lake Store.
 
-1. In the Azure Databricks blade on the left of Microsoft Edge, click on **Workspace**, click on the drop down next to **Workspace**, and click on the dropdown next to **Users**. Then click on the drop down next to your username and point to **Create** and then click on **Notebook**.
+1. In the Azure Databricks blade on the left of Microsoft Edge, click on **Workspace**, click on the drop down next to **Workspace**, and click on the dropdown next to **Users**. Then click on the drop down next to your username (**Home** icon) and point to **Create** and then click on **Notebook**.
 
     ![Creating a Notebook in Azure Databricks](Linked_Image_Files/ScreenShot00823.png)
 
