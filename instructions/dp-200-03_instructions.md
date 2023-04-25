@@ -462,6 +462,7 @@ Follow the instructions within the notebook, until you've completed the entire n
 
 -->
 
+<!--
 ### Task 4: Connecting-to-JDBC
 
 1. Within the Workspace, using the command bar on the left, select **Workspace**, **Users**, and select **your username** (the entry with house icon).
@@ -473,6 +474,8 @@ Follow the instructions within the notebook, until you've completed the entire n
 ```url
 https://github.com/azuredevops619/MicrosoftLearning-DP-200-Implementing-an-Azure-Data-Solution-/blob/master/Labfiles/Starter/04-Connecting-to-JDBC.dbc
 ```
+
+--> 
 
 4. Select **Import**.
 5. Follow and run the steps in the notebooks 
