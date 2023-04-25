@@ -190,7 +190,7 @@ The main tasks for this exercise are as follows: (Detailed steps are under Task 
 
 3. In the **Microsoft - App registrations** screen, click on the **+ New registration** button.
 
-4. In the register an application screen, provide the **name** of **DLAccessxx** where **xx** are your initials (add a random number or string to make the name unique if you are receiving resource with the name already existing error) and under the **Redirect URI (optional)** section, ensure **Web** is selected and type **http://localhost**for the application value. After setting the values.
+4. In the register an application screen, provide the **name** of **DLAccessxx** where **xx** are your initials (add a random number or string to make the name unique if you are receiving resource with the name already existing error) and under the **Redirect URI (optional)** section, ensure **Web** is selected and type **http://localhost/exampleapp** for the application value. After setting the values.
 
     ![Registering an application in the Azure portal](Linked_Image_Files/M03-E03-T03-img01.png)
 
