@@ -475,7 +475,7 @@ Follow the instructions within the notebook, until you've completed the entire n
 https://github.com/azuredevops619/MicrosoftLearning-DP-200-Implementing-an-Azure-Data-Solution-/blob/master/Labfiles/Starter/04-Connecting-to-JDBC.dbc
 ```
 
---> 
-
 4. Select **Import**.
 5. Follow and run the steps in the notebooks 
+
+--> 
