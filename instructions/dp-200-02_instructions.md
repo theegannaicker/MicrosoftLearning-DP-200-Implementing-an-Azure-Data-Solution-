@@ -59,7 +59,7 @@ Estimated Time: 20 minutes
 
 Individual exercise
   
-The main tasks for this exercise are as follows:
+The main tasks for this exercise are as follows: (Detailed steps are under Task 1 below)
 
 1. Create Azure resource group named **awrgstudxx** in the region closest to the lab location, where **xx** are your initials.
 
@@ -157,7 +157,9 @@ The main tasks for this exercise are as follows:
 
     ![List of Containers in the Azure portal](Linked_Image_Files/M02-E02-T03-img02.png)
 
-### Task 4: Upload some graphics to the images container of the storage account.
+### Task 4: Upload some graphics to the images container of the storage account. 
+
+Download the zip with data from [here](https://github.com/azuredevops619/MicrosoftLearning-DP-200-Implementing-an-Azure-Data-Solution-/archive/refs/heads/master.zip) 
 
 1. In the Azure portal, in the **awsastudxx - Containers** screen, click on the **images** container in the list.
 
