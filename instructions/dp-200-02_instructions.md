@@ -159,7 +159,7 @@ The main tasks for this exercise are as follows: (Detailed steps are under Task 
 
 ### Task 4: Upload some graphics to the images container of the storage account. 
 
-Download the zip with data from [here](https://github.com/azuredevops619/MicrosoftLearning-DP-200-Implementing-an-Azure-Data-Solution-/archive/refs/heads/master.zip) 
+Download and extract the zip with data from [here](https://github.com/azuredevops619/MicrosoftLearning-DP-200-Implementing-an-Azure-Data-Solution-/archive/refs/heads/master.zip) 
 
 1. In the Azure portal, in the **awsastudxx - Containers** screen, click on the **images** container in the list.
 
@@ -167,7 +167,7 @@ Download the zip with data from [here](https://github.com/azuredevops619/Microso
 
 3. In the **Upload blob** screen, in the Files text box, click on the **folder** icon to the right of the text box.
 
-4. In the **Open** dialog box, browse to  **Labfiles\Starter\DP-200.2\website graphics** folder. Highlight the following files:
+4. In the **Open** dialog box, browse to  **Labfiles\Starter\DP-200.2\website graphics** folder (it is inside the .zip that you extracted). Highlight the following files:
 
     - one.png
 
@@ -195,7 +195,7 @@ Estimated Time: 15 minutes
 
 Individual exercise
   
-The main tasks for this exercise are as follows:
+The main tasks for this exercise are as follows: (Detailed steps are under Task 1)
 
 1. Create and configure a storage account named **awdlsstudxx** as a Data Lake Store Gen2 storage type in the region closest to the lab location, within the resource group awrgstudxx, where **xx** are your initials.
 
@@ -270,7 +270,7 @@ Estimated Time: 10 minutes
 
 Individual exercise
   
-The main tasks for this exercise are as follows:
+The main tasks for this exercise are as follows: (Detailed steps are under Task 1)
 
 1. Install and start Microsoft Azure Storage Explorer
 
@@ -301,7 +301,7 @@ The main tasks for this exercise are as follows:
 
 9. Select your account where the following pop up message should show up **Authenticated. You can return to Storage Explorer. You might need to authenticate again if you close this browser tab**
 
-15. After you successfully sign in with an Azure account, the account and the Azure subscriptions associated with that account are added to the left pane. Select the **default directory box** and Azure subscriptions will load in few seconds, and then select **Open explorer**. The left pane displays the storage accounts associated with the selected Azure subscriptions.
+15. After you successfully sign in with an Azure account, the account and the Azure subscriptions associated with that account are added to the left pane. Make sure the **default directory box or Subscription Name** is selected, Subscription name may differ from the screenshot, select the subscription that is visible to you, and then select **Open explorer**. The left pane displays the storage accounts associated with the selected Azure subscriptions.
 
    ![Azure Storage Explore](Linked_Image_Files/ScreenShot00809.png)
    
@@ -313,13 +313,13 @@ The main tasks for this exercise are as follows:
 
 2. Under **Storage Accounts**, search for the storage account **awdlsstudxx (ADLS Gen2)**, and click on the arrow to expand it.
 
-3. Under **Blob Containers**, click on the arrow to expand it and show the **logs** file system. Click on the **logs** file system.
+3. Under **Blob Containers**, click on the arrow to expand it and show the **logs** file system. Click on the **logs** file system that you created (not the default $logs).
 
 4. In Azure Storage Explorer, click on the arrow of the **Upload** icon, and click on the **Upload Files..**.
 
 5. In Upload Files dialog box, click on the ellipsis next to the **Selected files** text box.
 
-6. In the **Choose files to upload** dialog box, browse to **Labfiles\Starter\DP-200.2\logs** folder. Highlight the following files:
+6. In the **Choose files to upload** dialog box, browse to **Labfiles\Starter\DP-200.2\logs** folder (this is the path inside .zip that you extracted). Highlight the following files:
 
     - weblogsQ1.log
 
@@ -353,12 +353,12 @@ The main tasks for this exercise are as follows:
 
    ![Files uploaded to Containers in Azure Storage Explore](Linked_Image_Files/M02-E04-T02-img02.png)
 
-16. In Azure Storage Explorer, in the **data** file system, click on the **+ New Folder** button.
+16. In Azure Storage Explorer, again in the **data** file system, click on the **+ New Folder** button.
 
-17. In the New Folder screen, in the New folder name text box, type **output** and click on **OK**
+17. In the New Folder screen, in the New folder name text box, type **output** and click on **OK** (output folder should be inside data container in ADLS) 
 
 18. Close down Azure Storage Explorer.
 
 19. Return to the Azure portal, and navigate to the **Home** blade.
 
-> **Result**: After you completed this exercise, you have created a Data Lake Gen II Storage account named awdlsstudxx that has a file system named data that contains two weblog files that are ready to be used by the Data scientists at AdventureWorks.
+> **Result**: After you completed this exercise, you have created a Data Lake Gen II Storage account named awdlsstudxx that has a file system named data that contains two weblog files that are ready to be used by the Data scientists at AdventureWorks. Start with the next lab now. 
