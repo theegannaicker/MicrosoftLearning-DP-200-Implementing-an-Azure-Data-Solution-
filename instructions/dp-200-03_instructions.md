@@ -247,11 +247,7 @@ The main tasks for this exercise are as follows: (Detailed steps are under Task 
 
 ![Creating a Notebook in Azure Databricks](Linked_Image_Files/M03-E03-T04-img01.png)
 
-3. Ensure that the Cluster states the name of the cluster that you have created earlier, click on **Create**
-
-     > **Note**: This will open up a Notebook with the title My Notebook (Scala).
-
-4. In the Notebook, in the cell  **Cmd 1**, copy the following code and paste it into the cell:
+3. In the Notebook, in the cell  **Cmd 1**, copy the following code and paste it into the cell:
 
     ```scala
     //Connect to Azure Data Lake Storage Gen2 account
@@ -263,7 +259,7 @@ The main tasks for this exercise are as follows: (Detailed steps are under Task 
     spark.conf.set("fs.azure.account.oauth2.client.endpoint.<storage-account-name>.dfs.core.windows.net", "https://login.microsoftonline.com/<tenant-id>/oauth2/token")
     ```
 
-5. In this code block, replace the **application-id**, **authentication-key**, **tenant-id**, and **storage-account-name** placeholder values in this code block* with the values that you collected earlier and are held in notepad.
+4. In this code block, replace the **application-id**, **authentication-key**, **tenant-id**, and **storage-account-name** placeholder values in this code block* with the values that you collected earlier and are held in notepad.
 
     - **storage-account-name**: **awdlsstudxx**, where **xx** are your initials.
 
@@ -274,7 +270,7 @@ The main tasks for this exercise are as follows: (Detailed steps are under Task 
     - **tenant-id**: this ID you should have saved but can be find through Microsoft_AAD_IAM -> ActiveDirectoryMenuBlade -> Properties
 
 
-6. In the Notebook, in the cell under **Cmd 1**, click on the **Run** icon and click on **Run Cell** as highlighted in the following graphic. 
+5. In the Notebook, in the cell under **Cmd 1**, click on the **Run** icon and click on **Run Cell** as highlighted in the following graphic. 
 
     ![Running cvode in a Notebook in Azure Databricks](Linked_Image_Files/M03-E03-T04-img02.png)
 
