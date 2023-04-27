@@ -60,10 +60,10 @@ The main tasks for this exercise are as follows:
     - In the workspace details section, create the workspace with the following settings:
         
         - **Workspace Name**: **wrkspcxx**, where **xx** are your initials.
-        - **Region**: choose the region nearest to you and where you deployed your resource group
-        - **Select Data Lake Storage Gen2**: "from subscription"
-        - **Account Name**: select **awdlsstudxx**, where **xx** are your initials
-        - **File System Name**: select **data**
+        - **Region**: EastUS
+        - **Select Data Lake Storage Gen2**: "From subscription"
+        - **Account Name**: create new as **awdlsstudxx**, where **xx** are your initials
+        - **File System Name**: create new named **data**
         - **Check** the "Assign myself the Storage Blob Data Contributor role on the Data Lake Storage Gen2 account 'awdlsstudxx" 
 
         ![Create Synapse Workspace](Linked_Image_Files/M05-E02-T01-img01a.png) 
@@ -82,55 +82,13 @@ The main tasks for this exercise are as follows:
 
 6. Once provisioned select **Go to resource**, and you'll be landing in the **Overview** page of your Azure Synapse Analytics workspace.  
 
-7. Select **+ New dedicated SQL Pool**.
-
-8. In the **basics** page of **Create dedicated SQL pool** blade configure the following settings:
-- Dedicated SQL pool name: **dedsqlxx**, where **xx** are your initials
-- Set the performance of the **dedsqlxx** to **DW100c**
-- Leave all the other settings per default
-
-9. In the **Create dedicated SQL pool** screen, click **Review + create**.
-
-10. In the **Create dedicated SQL pool** blade, click **Create**.
-  
-
-   > **Note**: The provision will takes approximately 7 minutes.
-
-### Task 2: Configure the Server Firewall
-
-1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstudxx**, and then click on **wrkspcxx**, where **xx** are your initials
-
-2. In the **wrkspcxx** screen, click on **Networking**.
-
-3. In the **wrkspcxx**- Firewalls  screen, click on the option **+ Add client IP**, and check that **Allow Azure services and resources to access this workspace** is set to **On**, and then click on **Save**. On the success screen click **OK**.
-
-    ![Configuring Azure Synapse Analytics firewall settings in the Azure portal](Linked_Image_Files/M05-E02-T02-img01.png)
-
-    > **Note**: You will receive a message stating that the the server firewall rules have been successfully updated
-
-4. Close down the Firewalls screen.
-
-> **Result**: After you completed this exercise, you have created an Azure  Synapse Analytics  instance and configures the server firewall to enable connections against it.
-
-### Task 3: Pause the **dedsqlxx** dedicated SQL Pool
-
-1. Navigate to **dedsqlxx** resource in your resource group. 
-
-2. Click on **dedsqlxx**, where **xx** are your initials.
-
-3. In the **dedsqlkxx (wrkspcxx/dedsqlxx)** screen, click on **Pause**.
-
-4. In the Pause **dedsqlxx** screen, click **Yes**
-
-
-
-## Exercise 3: Creating an Azure Synapse Analytics database and tables
+## Exercise 2: Creating an Azure Synapse Analytics database and tables
 
 Estimated Time: 25 minutes
 
 Individual exercise
 
-The main tasks for this exercise are as follows:
+The main tasks for this exercise are as follows: (Detailed steps are under Task 1)
 
 1. Understand Synapse Studio and connect to a dedicated SQL Pool.
 
@@ -138,42 +96,39 @@ The main tasks for this exercise are as follows:
 
 3. Create dedicated SQL Pool tables
 
-    > **Note**: If you are not familiar with Transact-SQL, statements are available for the following labs in the following location **Allfiles\Labfiles\Starter\DP-200.5\SQL DW Files**
-
 ### Task 1: Connect the Dedicated SQL Pool to Azure Synapse Studio
 
-1. Navigate to the **wrkspcxx** resource in your resource group. 
+1. Go to your Azure Synapse Workspace in Resource Group. 
 
 2. In the **overview** section of the Synapse Workspace navigate to **Open Synapse Studio**
 
-3. Click on the **Manage Hub** on the left side of the screen
+3. Click on the **Manage** on the left side of the screen
 
 4. Select **SQL pool** and select **+ New**
 
     - In the Basics details section, type in the following information
 
         - **Dedicated SQL pool name**: **DWDB**
-        - Slide the **DWxxxc** to **DW100c**
+        - **Slide** the performance level from **DWxxxc** to **DW100c**
 
     - Leave all the other settings as default
 
     - Select **Review + Create** and select **Create**
 
-
     ![Dedicated SQL Pool creation through Synapse Workspace](Linked_Image_Files/M05-E03-T01-img01a.png)
 
- > **Note**: The creation of the database takes approximately 6 minutes.
+ > **Note**: The creation of the database takes approximately 5-6 minutes.
 
-5. Once the database is set up, navigate to the **Data Hub** on the left side of the screen. Select the ellipsis next to **Databases** and select **refresh**. You should see the the newly created database DWDB. 
+5. Once the database is set up, navigate to the **Data** on the left side of the screen. Select the ellipsis next to **Databases** and select **refresh**. You should see the the newly created database DWDB. 
 
 
 ### Task 3: Create dedicated SQL Pool tables.
 
-1. In Synapse Studio, navigate to the newly created database under **Databases** in the **Data hub**, when opening the ellipsis in the **Data hub** tab. Click on **DWDB(SQL)** and click on the 3 dots next to it.
+1. In Synapse Studio, navigate to the newly created database under **Databases** in the **Data**, when opening the ellipsis in the **Data** tab. Click on **DWDB(SQL)** and click on the 3 dots next to it.
 
 2. Select **New SQL script**, and **empty script**
 
-    >**Note**: If you are unfamiliar with Transact-SQL, there is a script in the Allfiles\Solution\DP-200.5\folder named **Exercise3 Task3Step2 script.sql**. It contains the bulk of the code required to create the tables, but you do have to complete the code by selecting the distribution type to use for each table 
+    >**Note**: Syntax to create the tables is [here](https://github.com/azuredevops619/MicrosoftLearning-DP-200-Implementing-an-Azure-Data-Solution-/blob/master/Labfiles/Starter/DP-200.5/SQL%20DW%20Files/Lab%205.3.3.%20Creating%20Tables/1_Creating%20Tables.sql)
 
 3. Create a table named **dbo.Users** with a **clustered columnstore** index with a distribution of **replicate** with the following columns:
 
@@ -185,7 +140,6 @@ The main tasks for this exercise are as follows:
     | Country | nvarchar(100) | NULL|
 
       >**Note**: Make sure that the script has is connected to **DWDB** and uses the database **DWDB**. 
-
 
 4. In **Synapse Studio**, click on **Run** and the query will be executed. To verify if the **dbo.Users** table was created you can click refresh and navigate to **tables** which, when expanded, should show you the table. 
 
@@ -259,7 +213,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 2: Create a dbo.Dates table using PolyBase from Azure Blob
 
-1. In Synapse Studio, navigate to the newly created database under **Databases** , when opening the ellipsis in the **Data hub** tab. Click on **DWDB**.
+1. In Synapse Studio, navigate to the newly created database under **Databases** , when opening the ellipsis in the **Data ** tab. Click on **DWDB**.
 
 2. Select the ellipsis next to the **DWDB** database.
 
@@ -280,7 +234,7 @@ The main tasks for this exercise are as follows:
 
 8. Select **New SQL script**, and **empty script**
 
-9. Create a database scoped credential named **AzureStorageCredential** with the following details, by typing in the following code in the query editor:
+9. Create a database scoped credential named **AzureStorageCredential** with the following details, by typing in the following code in the query editor: You have to put data lake key that you copied earlier in **SECRET** section.  
     - IDENTITY: **MOCID**
     - SECRET: **The access key of your storage account**
 
@@ -301,7 +255,7 @@ The main tasks for this exercise are as follows:
 
 13. Select **New SQL script**, and **empty script**
 
-14. In the Query window, type in code that will create an external data source named **AzureStorage** for the Blob storage account and data container created in with a type of **HADOOP** that makes use of the ****AzureStorageCredential**. Note that you should replace **awdlsstudxx** in the location key with your storage account with your initials.
+14. In the Query window, type in code that will create an external data source named **AzureStorage** for the Blob storage account and data container created in with a type of **HADOOP** that makes use of the ****AzureStorageCredential**. Note that you should replace **awdlsstudxx** in the location key with your storage account name.
 
     ```SQL
 	CREATE EXTERNAL DATA SOURCE AzureStorage
@@ -438,7 +392,7 @@ The main tasks for this exercise are as follows:
 
 40. In **Synapse Studio**, click on **Run** and the query will be executed.
 
-41. In Synapse Studio, navigate to the newly created database under **Databases** , when opening the ellipsis in the **Data hub** tab. Click on **DWDB**.
+41. In Synapse Studio, navigate to the newly created database under **Databases** , when opening the ellipsis in the **Data ** tab. Click on **DWDB**.
 
 42. Select the ellipsis next to the **DWDB** database.
 
@@ -452,6 +406,13 @@ The main tasks for this exercise are as follows:
 >**Note**: Make sure that the script has is connected to **DWDB** and uses the database **DWDB**.
 
 45. In **Synapse Studio**, click on **Run** and the query will be executed.
-46. Like you have Paused the first dedicated SQL Pool, do pause the secomd dedicated sql pool **dwdb** as well.
+
+### Task 3: Pause the dedicated sql pool 
+
+1. Click on the **Manage** on the left side of the screen.  
+
+2. Select SQL pool and go to **DWDB** 
+
+3. Using the ellipsis next to the name **Pause** the dedicated sql pool. 
 
 
