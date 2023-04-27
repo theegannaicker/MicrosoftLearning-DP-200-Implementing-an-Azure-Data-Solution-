@@ -239,8 +239,8 @@ The main tasks for this exercise are as follows:
     - **Output alias**: **PhoneCallRefData**
     - **Select Event Hub from your subscriptions**: checked
     - **Subscription**: Your subscription name
-    - **Storage account**: **:awsastudxx**:, where xx is your initials (Note: If you do not see any listed storage account then make one first https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal)
-    - **Container**: **Use existing** and select **phonecalls**
+    - **Storage account**: **awdlsstudxx**:, where xx is your initials (Note: If you do not see any listed storage account then make one first https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal)
+    - **Container**: **Create existing** and select **phonecalls**
     - **Authentication mode**: select **Connection string**
     - Leave the rest of the entries as default values. Finally, click **Save**.
 
@@ -300,7 +300,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 6: Validate streaming data is collected
 
-1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstudxx**, and then click on **awsastudxx**, where **xx** are your initials.
+1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstudxx**, and then click on **awdlsstudxx**, where **xx** are your initials.
 
 2. In the Azure portal, click **Containers** box, and then click on the container named **phonecalls**.
 
