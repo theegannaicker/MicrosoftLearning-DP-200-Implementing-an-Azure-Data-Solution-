@@ -242,7 +242,7 @@ The main tasks for this exercise are as follows:
     CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
     WITH
     IDENTITY = 'MOCID',
-    SECRET = 'Your storage account key';
+    SECRET = 'Your storage account key'
     ```
     >**Note**: Make sure that the script has is connected to **DWDB** and uses the database **DWDB**. 
 
