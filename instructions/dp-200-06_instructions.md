@@ -18,7 +18,7 @@ After completing this lab, you will be able to:
 3. Initiate a data generation application
 4. Process Data with a Stream Analytics Jobs
 
-## ## Exercise 1: Scenario
+## Exercise 1: Scenario
   
 As part of the digital transformation project, you have been tasked by the CIO to help the customer services departments identify fraudulent calls. Over the last few years the customer services departments have observed an increase in calls from fraudulent customer who are asking for support for bikes that are no longer in warranty, or bikes that have not even been purchased at AdventureWorks. 
 
@@ -59,8 +59,6 @@ The main tasks for this exercise are as follows:
     - **Pricing Tier**: **Standard**    
     - **Throughput Units**: **1**
     - Leave other options to their default settings
-
-        ![Creating an Event Hub Namespace in Azure portal](Linked_Image_Files/M06-E02-T01-img01.png)
 
 4. Then click **Review + Create** and then click **Create**
 
