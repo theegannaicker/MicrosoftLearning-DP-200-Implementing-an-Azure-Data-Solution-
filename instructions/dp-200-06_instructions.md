@@ -5,8 +5,6 @@
 
 **Pre-requisites**: It is assumed that the case study for this lab has already been read. It is assumed that the content and lab for module 1: Azure for the Data Engineer has also been completed
 
-**Lab files**: The files for this lab are located in the _Allfiles\Labfiles\Starter\DP-200.6_ folder.
-
 ## Lab overview
 
 The students will be able to describe what data streams are and how event processing works and choose an appropriate data stream ingestion technology for the AdventureWorks case study. They will provision the chosen ingestion technology and integrate this with Stream Analytics to create a solution that works with streaming data.
@@ -20,7 +18,7 @@ After completing this lab, you will be able to:
 3. Initiate a data generation application
 4. Process Data with a Stream Analytics Jobs
 
-## Scenario
+## ## Exercise 1: Scenario
   
 As part of the digital transformation project, you have been tasked by the CIO to help the customer services departments identify fraudulent calls. Over the last few years the customer services departments have observed an increase in calls from fraudulent customer who are asking for support for bikes that are no longer in warranty, or bikes that have not even been purchased at AdventureWorks. 
 
@@ -32,32 +30,6 @@ At the end of this lad, you will have:
 2. Ingested data with Event Hubs
 3. Initiated a data generation application
 4. Processed Data with Stream Analytics Jobs
-
-> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
-
-## Exercise 1: Explain data streams and event processing (You can skip Exercise 1... its only theory)
-
-Estimated Time: 15 minutes
-
-Group exercise
-  
-The main task for this exercise are as follows:
-
-1. From the case study and the scenario, identify the data stream ingestion technology for AdventureWorks, and the high-level tasks that you will conduct as a data engineer to complete the social media analysis requirements.
-
-2. The instructor will discuss the findings with the group.
-
-### Task 1: Identify the data requirements and structures of AdventureWorks.
-
-1. From the lab virtual machine, start **Microsoft Word**, and open up the file **DP-200-Lab06-Ex01.docx** from the **Allfiles\Labfiles\Starter\DP-200.6** folder.
-
-2. As a group, spend **10 minutes** discussing and listing the data requirements and data structure that your group has identified within the case study document.
-
-### Task 2: Discuss the findings with the Instructor
-
-1. The instructor will stop the group to discuss the findings.
-
-> **Result**: After you completed this exercise, you have created a Microsoft Word document that shows a table of data streaming ingestion and the high-level tasks that you will conduct as a data engineer to complete the social media analysis requirements .
 
 ## Exercise 2: Data Ingestion with Event Hubs.
   
@@ -83,9 +55,9 @@ The main tasks for this exercise are as follows:
     - **Subscription**: **Your subscription**
     - **Resource group**: **awrgstudxx**
     - **Namespace Name**: **xx-phoneanalysis-ehn**, where xx are your initials
-    - **Location**: select the location closest to you
+    - **Location**: eastus
     - **Pricing Tier**: **Standard**    
-    - **Throughput Units**: **20**
+    - **Throughput Units**: **1**
     - Leave other options to their default settings
 
         ![Creating an Event Hub Namespace in Azure portal](Linked_Image_Files/M06-E02-T01-img01.png)
