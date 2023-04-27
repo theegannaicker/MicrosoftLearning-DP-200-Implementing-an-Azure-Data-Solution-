@@ -237,10 +237,9 @@ The main tasks for this exercise are as follows:
 
 4. In the **Blob storage/ADLS Gen2** window, type or select the following values in the pane:
     - **Output alias**: **PhoneCallRefData**
-    - **Select Event Hub from your subscriptions**: checked
     - **Subscription**: Your subscription name
     - **Storage account**: **awdlsstudxx**:, where xx is your initials (Note: If you do not see any listed storage account then make one first https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal)
-    - **Container**: **Create existing** and select **phonecalls**
+    - **Container**: **Create new** and Type **phonecalls**
     - **Authentication mode**: select **Connection string**
     - Leave the rest of the entries as default values. Finally, click **Save**.
 
