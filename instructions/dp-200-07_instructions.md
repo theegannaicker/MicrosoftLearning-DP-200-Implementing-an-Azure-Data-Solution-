@@ -383,10 +383,10 @@ The main tasks for this exercise are as follows:
 7. Copy the generated token and store in Notepad, and then click on **Done**.
 
 8. Create a **single node** cluster using **compute tab** on the left bar inside databricks workspace.  
-        Cluster name: **awdbclstudxx**, where xx are your initials or any other suitable name
-        Cluster Mode: **Single Node** (using the radio button)
-        Databricks Runtime Version: Runtime: Select **10.4 LTS** Spark runtime from the list
-        Node type: **Standard_DS3_v2**
+        - Cluster name: **awdbclstudxx**, where xx are your initials or any other suitable name
+        - Cluster Mode: **Single Node** (using the radio button)
+        - Databricks Runtime Version: Runtime: Select **10.4 LTS** Spark runtime from the list
+        - Node type: **Standard_DS3_v2**
 
 ### Task 2: Generate a Databricks Notebook
 
