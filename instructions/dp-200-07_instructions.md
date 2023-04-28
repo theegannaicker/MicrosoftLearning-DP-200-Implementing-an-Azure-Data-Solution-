@@ -3,20 +3,6 @@
 
 **Estimated Time**: 70 minutes
 
-**Pre-requisites**: It is assumed that the case study for this lab has already been read. It is assumed that the content and lab for module 1: Azure for the Data Engineer has also been completed
-
-* **Azure subscription**: If you don't have an Azure subscription, create
-    a [free account](https://azure.microsoft.com/free/) before you begin.
-
-* **Azure Data Lake Storage Gen2 storage account**: If you don't have an ADLS
-    Gen2 storage account, see the instructions in [Create an ADLS Gen2 storage
-    account](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account).
-
-* **Azure Synapse Analytics**: If you don't have a Azure Synapse Analytics account, see the instructions in [Create a SQL DW
-    account](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/create-data-warehouse-portal).
-
-**Lab files**: The files for this lab are located in the _Allfiles\Labfiles\Starter\DP-200.7_ folder.
-
 ## Lab overview
 
 In this module, students will learn how Azure Data factory can be used to orchestrate the data movement from a wide range of data platform technologies. They will be able to explain the capabilities of the technology and be able to set up an end to end data pipeline that ingests data from SQL Database and load the data into Azure Synapse Analytics. The student will also demonstrate how to call a compute resource.
@@ -386,7 +372,7 @@ The main tasks for this exercise are as follows:
 
 2. Click on **Launch Workspace**
 
-3. Find the **user settings** in the Lower left corner of your Databricks workspace.
+3. Find the **user settings** in the Upper right corner of your Databricks workspace.
 
 4. Click **User Settings**.
 
@@ -396,15 +382,21 @@ The main tasks for this exercise are as follows:
 
 7. Copy the generated token and store in Notepad, and then click on **Done**.
 
+8. Create a **single node** cluster using **compute tab** on the left bar inside databricks workspace.  
+        Cluster name: **awdbclstudxx**, where xx are your initials or any other suitable name
+        Cluster Mode: **Single Node** (using the radio button)
+        Databricks Runtime Version: Runtime: Select **10.4 LTS** Spark runtime from the list
+        Node type: **Standard_DS3_v2**
+
 ### Task 2: Generate a Databricks Notebook
 
 1. On the left of the screen, click on the **Workspace** icon, then click on the arrow next to the word Workspace, and click on **Create** and then click on **Folder**. Name the folder **adftutorial**, and click on **Create Folder**. The adftutorial folder appears in the Workspace.
 
 2. Click on the drop down arrow next to adftutorial, and then click **Create**, and then click **Notebook**.
 
-3. In the Create Notebook dialog box, type the name of **mynotebook**, and ensure that the language states **Python**, and then click on **Create**. The notebook with the title of mynotebook appears/
+3. In the Notebook page, type the name of **mynotebook**, and ensure that the language **Python** is selected. The notebook with the title of mynotebook appears. 
 
-4. In the newly created notebook "mynotebook'" add the following code and click **run**.
+4. In the newly created notebook "mynotebook'" add the following code and **no** need to run the cell. Data Factory will run this for us. 
 
     ```Python
     # Creating widgets for leveraging parameters, and printing the parameters
@@ -437,7 +429,7 @@ The main tasks for this exercise are as follows:
     - **Databricks Workspace**: awdbwsstudxx, where xx are your initials
     - **Select cluster**: **Existing interactive cluster**
     - **Access Token**: Copy the access token from Notepad and paste into this field
-    - **Choose from existing cluster**: awdbclstudxx, where xx are your initials
+    - **Choose from existing cluster**: **awdbclstudxx**, where xx are your initials
     - Leave other options to their default settings
     - Click **Create**
 
@@ -458,7 +450,7 @@ The main tasks for this exercise are as follows:
 6. In the properties for the **Notebook1** window at the bottom, complete the following steps:
     - Switch to the **Azure Databricks** tab.
     - Select **xx_dbls** which you created in the previous procedure.
-    - Switch to the **Settings** tab, and browse to **/adftutorial/mynotebook** in Notebook path. 
+    - Switch to the **Settings** tab, and browse to **/adftutorial/mynotebook** in Notebook path. (if you have created the notebook in databricks at any other path then select that path)
     - Expand **Base Parameters**, and then click on **+ New**
     - Create a parameter with the Name of **input**, with a value of **@pipeline().parameters.name**
 
@@ -484,11 +476,6 @@ No errors were found." Click on the >> to close the window.
 
 ### Task 8: Verify the output
 
-1. In Microsoft Edge, Open **Databricks** workspace 
+1. Open **Databricks** workspace 
 
-2. In the **Azure Databricks** workspace, click on **Compute** then on your **Cluster**. 
-
-3. Click on the cluster **awdbclstudxx**, and then click on the **Event Log** to view the activities. It will show time when the job starts running.  
-
-    > **Note**: You should see an Event Type of **Starting** with the time you triggered the pipeline run.
-4. In the **Azure Databricks** workspace, click on **Workflow** then on your **Job run** and see the details of your job.
+2. In the **Azure Databricks** workspace, click on **Workflow** then on your **Job run** and see the details of your job.
