@@ -61,7 +61,7 @@ Individual exercise
   
 The main tasks for this exercise are as follows: (Detailed steps are under Task 1 below)
 
-1. Create Azure resource group named **awrgstudxx** in the region closest to the lab location, where **xx** are your initials.
+1. Create Azure resource group named **awrgstudxx** in the region closest to the lab location, where **xx** are your initials. (Note: Select existing Resource Group if you do not have the rights to create a RG)
 
 2. Create and configure a storage account named **awsastudxx** in the region closest to the lab location within the resource group awrgstudxx, where **xx** are your initials.
 
