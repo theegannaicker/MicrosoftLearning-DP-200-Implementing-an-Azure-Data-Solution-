@@ -122,8 +122,9 @@ The main tasks for this exercise are as follows:
 
     > **Note**: You will be signed into the Azure Databricks Workspace in a separate tab in Microsoft Edge.
 
-**Note**: Due to constant UI updates by databricks, portal colour and icons may look different however the functionality doesnt change.    
-
+```diff
+- **Note**: Due to constant UI updates by databricks, portal colour and icons may look different however the functionality doesnt change.    
+```
 2. Under **Common Tasks**, click **Compute**. 
 
      ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/ScreenShot00812.png)
