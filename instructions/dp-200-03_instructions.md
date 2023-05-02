@@ -379,7 +379,7 @@ The main tasks for this exercise are as follows:
     This code connects to the Data Lake Storage filesystem named "Data" and reads data in the preferences.json file stored in that data lake. Then a simple query has been created to retrieve data and the column "page" has been renamed to "bike_preference".
     ```
 
-3. Run the cell to see the markdown
+3. Run the cell to see the markdown (HTML embedded in notebook). Markdown provides a robust set of options for documenting data, enhancing the options Databricks users have for increasing the discoverability and understanding of shared data assets. Using markdown comments has no impact on query performance.
 
     >**Note**  A future lab will explore how this data can be exported to another data platform technology
 
