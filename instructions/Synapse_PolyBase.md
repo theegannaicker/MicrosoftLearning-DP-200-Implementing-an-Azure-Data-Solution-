@@ -246,7 +246,7 @@ The main tasks for this exercise are as follows:
     CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
     WITH
     IDENTITY = 'MOCID',
-    SECRET = 'Your storage account key'
+    SECRET = 'Hey !! Put your storage account key here !'
     ```
     >**Note**: Make sure that the script has is connected to **DWDB** and uses the database **DWDB**. 
 
@@ -258,7 +258,7 @@ The main tasks for this exercise are as follows:
 
 13. Select **New SQL script**, and **empty script**
 
-14. In the Query window, type in code that will create an external data source named **AzureStorage** for the Blob storage account and data container created in with a type of **HADOOP** that makes use of the ****AzureStorageCredential**. Note that you should replace **awdlsstudxx** in the location key with your storage account name.
+14. In the Query window, type in code that will create an external data source named **AzureStorage** for the Blob storage account and data container created in with a type of **HADOOP** that makes use of the ****AzureStorageCredential**. **Note** that you should replace **awdlsstudxx** in the location key with your storage account name in the syntax below.
 
     ```SQL
 	CREATE EXTERNAL DATA SOURCE AzureStorage
