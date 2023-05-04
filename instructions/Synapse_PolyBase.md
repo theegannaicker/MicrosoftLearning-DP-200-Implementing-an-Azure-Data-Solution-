@@ -258,7 +258,7 @@ The main tasks for this exercise are as follows:
 
 13. Select **New SQL script**, and **empty script**
 
-14. In the Query window, type in code that will create an external data source named **AzureStorage** for the Blob storage account and data container created in with a type of **HADOOP** that makes use of the ****AzureStorageCredential**. **Note** that you should replace **awdlsstudxx** in the location key with your storage account name in the syntax below.
+14. In the Query window, type in code that will create an external data source named **AzureStorage** for the Blob storage account and data container created in with a type of **HADOOP** that makes use of the ****AzureStorageCredential**. **Note** that you should replace **awdlsstudxx** in the location key with your storage account name in the below syntax.
 
     ```SQL
 	CREATE EXTERNAL DATA SOURCE AzureStorage
