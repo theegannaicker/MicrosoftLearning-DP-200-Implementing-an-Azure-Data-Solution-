@@ -210,7 +210,7 @@ The main tasks for this exercise are as follows:
 
 3. In your **phoneanalysis-asa-job** Stream Analytics job window, in the left hand blade, under **Job topology**, click **Inputs**.
 
-4. In the **Inputs** screen, click **+ Add stream input**, and then click **Event Hub**.
+4. In the **Inputs** screen, click **+ Add input**, and then click **Event Hub**.
 
 5. In the Event Hub screen, type in the following values and click the **Save** button.
     - **Input alias**: Enter a name for this job input as **PhoneStream**.
