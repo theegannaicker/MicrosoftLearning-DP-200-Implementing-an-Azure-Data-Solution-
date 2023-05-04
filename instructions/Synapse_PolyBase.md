@@ -41,6 +41,10 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Create and configure a Azure Synapse Analytics instance.
 
+```diff
+- **Note**: If Azure Synapse Workspace already exists in your Resource Group then skip (Task 1: Create and configure a Azure Synapse Analytics instance) and continue from the next exercise (Exercise 2: Creating an Azure Synapse Analytics database and tables) onwards.    
+```
+
 1. In the Azure portal, click on the link **home** at the top left of the screen.
 
 2. In the Azure portal, click **+ Create a resource**.
