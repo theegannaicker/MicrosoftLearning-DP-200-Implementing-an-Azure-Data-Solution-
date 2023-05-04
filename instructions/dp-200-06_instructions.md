@@ -82,7 +82,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 3: Configure Event Hub security
 
-1. In the Azure portal, in the **xx-phoneanalysis-ehn** screen, where **xx** are your initials. Scroll to the bottom of the window, and click on **xx-phoneanalysis-eh** event hub.
+1. In the Azure portal, in the **xx-phoneanalysis-ehn** screen, where **xx** are your initials. **Scroll to the bottom of the window**, and click on **xx-phoneanalysis-eh** event hub. We will make the Shared access policies at the event hub instance level not at the event hub namespace level.  
 
 2. To grant access to the event hub, in the blade under the section **settings** on the left click **Shared access policies**.
 
