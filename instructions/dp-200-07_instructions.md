@@ -87,7 +87,7 @@ The main tasks for this exercise are as follows:
 
 2. In the xx-data-factory screen, in the left side of the screen, find **Author**
 
-3. **Open the authoring canvas** If coming from the ADF homepage, click on the **pencil icon** on the left sidebar and select the **+ pipeline button** to open the authoring canvas and create a pipeline.
+3.  Click on the Author **pencil icon** on the left sidebar and select the **+ pipeline button** to open the authoring canvas and create a pipeline. 
 
 4. **Add a copy activity** In the Activities pane, open the **Move and Transform** accordion and drag the **Copy data** activity onto the pipeline canvas.
 
