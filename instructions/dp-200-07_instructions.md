@@ -83,7 +83,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Add the Copy Activity to the designer
 
-1. On the deployment successful message, click on the button **Go to resource**.
+1. On the deployment successful message, click on the button **Go to resource**. On the overview page of **Azure Data Factory**. Click on **Launch Studio** to launch ADF portal. 
 
 2. In the xx-data-factory screen, in the middle of the screen, click on the button, **Author & Monitor**
 
