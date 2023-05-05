@@ -443,6 +443,8 @@ The main tasks for this exercise are as follows:
 
 3. Create a parameter with the Name of **name**, with a type of **string**
 
+![Creating Azure Data Factory in the Azure Portal](Linked_Image_Files/MicrosoftTeams-image.png)
+
 4. Under the **Activities** menu, expand out **Databricks**.
 
 5.  Click and drag **Notebook** onto the canvas.
