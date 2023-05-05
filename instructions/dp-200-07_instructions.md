@@ -85,7 +85,7 @@ The main tasks for this exercise are as follows:
 
 1. On the deployment successful message, click on the button **Go to resource**. On the overview page of **Azure Data Factory**. Click on **Launch Studio** to launch ADF portal. 
 
-2. In the xx-data-factory screen, in the middle of the screen, click on the button, **Author**
+2. In the xx-data-factory screen, in the left side of the screen, find **Author**
 
 3. **Open the authoring canvas** If coming from the ADF homepage, click on the **pencil icon** on the left sidebar and select the **+ pipeline button** to open the authoring canvas and create a pipeline.
 
