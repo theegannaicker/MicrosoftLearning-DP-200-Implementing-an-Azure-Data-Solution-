@@ -125,7 +125,7 @@ The main tasks for this exercise are as follows:
 ```diff
 - **Note**: Due to constant UI updates by databricks, portal colour and icons may look different however the functionality doesnt change.    
 ```
-2. Under **Common Tasks**, click **Compute**. 
+2. From the left hand side bar, click **Compute**. 
 
      ![Creating an Azure Databricks Cluster in the Azure portal](Linked_Image_Files/ScreenShot00812.png)
 
