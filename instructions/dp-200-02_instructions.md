@@ -278,7 +278,7 @@ The main tasks for this exercise are as follows: (Detailed steps are under Task 
 
 ### Task 1: Install Storage Explorer.
 
-1. Install Azure Storage Explorer from here [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) where there is a button that states **Download now**. click on this button. 
+1. Install Azure Storage Explorer from here [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) Select your operating system to start the download. click on this button. 
 2. Install Azure Storage Explorer.  
 
    > **Note**: The installation of Storage Explorer can take approximately 4 minutes. Azure Storage Explorer allows you to easily manage the contents of your storage account with Azure Storage Explorer. Upload, download, and manage blobs, files, queues, tables, and Cosmos DB entities. It also enables you to gain easy access to manage your virtual machine disks.
