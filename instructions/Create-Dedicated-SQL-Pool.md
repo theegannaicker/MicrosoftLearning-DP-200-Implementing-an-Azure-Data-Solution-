@@ -75,7 +75,7 @@ The main tasks for this exercise are as follows:
 
 2. In the **wrkspcxx** screen, click on **Networking**.
 
-3. In the **wrkspcxx**- Firewalls  screen, click on the option **+ Add client IP**, and check that **Allow Azure services and resources to access this workspace** is set to **On**, and then click on **Save**. On the success screen click **OK**.
+3. In the **wrkspcxx**- Firewalls  screen, click on the option **+ Add client IP**, and select/check that **Allow Azure services and resources to access this workspace** is set to **On**, and then click on **Save**. On the success screen click **OK**.
 
     ![Configuring Azure Synapse Analytics firewall settings in the Azure portal](Linked_Image_Files/M05-E02-T02-img01.png)
 
