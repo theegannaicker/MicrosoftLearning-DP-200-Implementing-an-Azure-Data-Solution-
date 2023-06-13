@@ -187,9 +187,9 @@ The main tasks for this exercise are as follows: (Detailed steps are under Task 
 
 1. In the Azure portal, Click the **Home** hyperlink, and then click the **Azure Active Directory** icon.
 
-2. In the **Default Azure - Overview** screen, click on **App registrations**.
+2. In the **Default Azure AD - Overview** screen, click on **App registrations**.
 
-3. In the **Default Azure - App registrations** screen, click on the **+ New registration** button.
+3. In the **Default Azure AD - App registrations** screen, click on the **+ New registration** button.
 
 4. In the register an application screen, provide the **name** of **DLAccessxx** where **xx** are your initials (add a random number or string to make the name unique if you are receiving resource with the name already existing error) and under the **Redirect URI (optional)** section, ensure **Web** is selected and type **http://localhost/exampleapp** for the application value. After setting the values.
 
